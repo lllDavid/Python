@@ -11,4 +11,3 @@ def doubleNumbers(wert):
 doubleNumbers((int(input("Geben sie eine Zahl zum verdoppeln an: "))))
 
 
-#Test Änderung Git 2
