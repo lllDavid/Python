@@ -61,21 +61,21 @@ for z in zahlen:
 
 # Aufgabe 7: Importiere dein Modul 'meinmodul' in dieses Skript und rufe die Funktion 'begruessung' mit deinem Namen auf. 5 Punkte
 
-import meinmodul as mm
-mm.begruessung("David")
+#import meinmodul as mm
+#mm.begruessung("David")
 
 # Aufgabe 8: Füge dem Modul 'meinmodul' ein Dictionary 'person1' hinzu mit den Schlüsseln 'name', 'alter', und 'stadt'. 5 Punkte
 
 # Aufgabe 9: Importiere das Dictionary 'person1' aus deinem Modul und gib das Alter der Person aus. 5 Punkte
 
-from meinmodul import person1
-print(person1["alter"])
+#from meinmodul import person1
+#print(person1["alter"])
 
 # Aufgabe 10: Erstelle einen Alias 'mm' für dein Modul 'meinmodul' und greife auf die Stadt der 'person1' aus dem Modul zu. 5 Punkte
 
-import meinmodul as mm
-x = mm.person1["stadt"]
-print(x)
+#import meinmodul as mm
+#x = mm.person1["stadt"]
+#print(x)
 
 # Aufgabe 11: Erstelle eine Basisklasse mit dem Namen 'Tier' mit den Attributen 'name' und 'fellfarbe' und einer Methode 'futter', die "Ich liebe Knochen" ausgibt. 5 Punkte
 
