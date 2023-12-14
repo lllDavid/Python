@@ -13,18 +13,18 @@ def create():
 
     mycursor.execute("CREATE DATABASE IF NOT EXISTS PythonDB")
     mycursor.execute("USE PythonDB")
-    mycursor.execute("CREATE TABLE IF NOT EXISTS kunden (name VARCHAR(255), ort VARCHAR(255), age INTEGER)")
+    mycursor.execute("CREATE TABLE IF NOT EXISTS kunden (id INTEGER, name VARCHAR(255), ort VARCHAR(255), age INTEGER)")
     print("Angelegt!")
 
     daten = [
-        ("Max", "Berlin",22),
-        ("Anna", "München",23),
-        ("Peter", "Hamburg",24),
-        ("Daniel", "Dortmund",25),
-        ("Sammy","Bremen",26)
+        (1,"Max", "Berlin",22),
+        (2,"Anna", "München",23),
+        (3,"Peter", "Hamburg",24),
+        (4,"Daniel", "Dortmund",25),
+        (5,"Sammy","Bremen",26)
     ]
 
-    einfuegen = "INSERT INTO kunden (name, ort, age) VALUES (%s, %s,%s)"
+    einfuegen = "INSERT INTO kunden (id, name, ort, age) VALUES (%s,%s, %s,%s)"
 
     for d in daten:
         mycursor.execute(einfuegen, d)
