@@ -16,7 +16,7 @@ def search():
     suchbegriff = input("Suchen: ")
 
     
-    suchen = f"SELECT * FROM kunden WHERE id LIKE '%{suchbegriff}%' OR name LIKE '%{suchbegriff}%' OR ort LIKE '%{suchbegriff}%' OR age LIKE '%{suchbegriff}%'"
+    suchen = f"SELECT * FROM kunden WHERE ID LIKE '%{suchbegriff}%' OR Name LIKE '%{suchbegriff}%' OR Ort LIKE '%{suchbegriff}%' OR notAlter LIKE '%{suchbegriff}%'"
 
     mycursor.execute(suchen)
     ergebnisse = mycursor.fetchall()
