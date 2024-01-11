@@ -7,7 +7,7 @@ def search():
         user='david',
         password='123456', 
         port=3306,
-        database="PythonDB"
+        database="Shop"
         
     )
 
@@ -15,8 +15,8 @@ def search():
 
     suchbegriff = input("Suchen: ")
 
-    
-    suchen = f"SELECT * FROM kunden WHERE ID LIKE '%{suchbegriff}%' OR Name LIKE '%{suchbegriff}%' OR Ort LIKE '%{suchbegriff}%' OR notAlter LIKE '%{suchbegriff}%'"
+    #Suchfilter
+    suchen = f"SELECT * FROM kunden WHERE ID LIKE '%{suchbegriff}%' OR LastName LIKE '%{suchbegriff}%' OR FirstName LIKE '%{suchbegriff}%' OR Ort LIKE '%{suchbegriff}%' OR Addresse LIKE '%{suchbegriff}%'"
 
     mycursor.execute(suchen)
     ergebnisse = mycursor.fetchall()
