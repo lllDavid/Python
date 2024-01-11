@@ -6,7 +6,6 @@ def create():
         user='david',
         password='123456',
         port=3306,
-        
     )
             
     mycursor = mydb.cursor()
@@ -14,7 +13,7 @@ def create():
     mycursor.execute("CREATE DATABASE IF NOT EXISTS Shop")
     mycursor.execute("USE Shop")
     mycursor.execute("CREATE TABLE IF NOT EXISTS kunden (ID INTEGER PRIMARY KEY, LastName VARCHAR(255), FirstName VARCHAR(255), Ort VARCHAR(255), Addresse VARCHAR(255))")
-    print("Datenbank angelegt")
+    print("Datenbank angelegt!")
 
     daten = [
         (1,"Meier", "Max", "Berlin", "Berlin-Straße 42"),
