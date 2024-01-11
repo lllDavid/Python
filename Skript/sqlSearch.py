@@ -5,7 +5,7 @@ def filtern():
     mydb = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='', 
+        password='123456', 
         port=3307,
         auth_plugin='mysql_native_password',
         database='meinedatenbank'
