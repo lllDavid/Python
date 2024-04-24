@@ -29,44 +29,39 @@ with open("Aufgabe1Persons.json", "r") as jsonFile:
     loadedJson = json.load(jsonFile)
     for entry in loadedJson:
         person = Person(entry['name'], entry['age'])
-        print("Name:", person.name)
-        print("Age:", person.age)
 
 
 
-#Aufgabe 3
-
-personen = {}
-
-with open("persons.txt", "r") as file:
-    for line in file:
-        name, age = line.strip().split(", ")
-        personen[name] = int(age)
-
-with open("Aufgabe3Persons.json", "w") as jsonFile:
-    json.dump(personen, jsonFile)
-
-print(personen)
-
+#Aufgabe3
+persons = []
  
-#Aufgabe 4
+with open("persons.txt","r") as txtFile:
+    for line in txtFile:
+        name,age = line.strip().split(", ")
+        persons.append({"name": name, "age": int(age)})
+ 
+with open("Aufgabe3Persons.json","w") as jsonFile:
+    json.dump(persons,jsonFile)
+   
+ 
+ 
+#Aufgabe4
 class JSON:
-    def __init__(self, input, output):
-        self.input = input
-        self.output = output
-    
-    def jsonVerarbeitung(self, newData):
-            with open(self.input, "r") as jsonFile:
-                data = json.load(jsonFile)
-            
-            data["name"] = newData[0]
-            data["age"] = newData[1]
-
-            with open(self.output, "w") as jsonFile:
-                json.dump(data, jsonFile)
-
-instanz = JSON("Aufgabe3Persons.json", "Aufgabe4Output.json")
-instanz.jsonVerarbeitung(["Karim",23])
+    def __init__(self,inputFile,outputFile):
+        self.inputFile = inputFile
+        self.outputFile = outputFile
+   
+    def jsonBearbeiten(self,newData):
+        with open(self.inputFile,"r") as jsonFile:
+            currentData = json.load(jsonFile)
+ 
+        currentData.append({"name": newData[0], "age": newData[1]})
+ 
+        with open(self.outputFile,"w") as jsonFile:
+            json.dump(currentData,jsonFile)
+ 
+ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
+ini.jsonBearbeiten(["Alex",30])
 
 
 
