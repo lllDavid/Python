@@ -46,6 +46,7 @@ with open("Aufgabe3Persons.json","w") as jsonFile:
  
  
 #Aufgabe4
+#Hinzufügen von Einträgen
 class JSON:
     def __init__(self,inputFile,outputFile):
         self.inputFile = inputFile
@@ -62,6 +63,28 @@ class JSON:
  
 ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
 ini.jsonBearbeiten(["Alex",30])
+
+
+
+#Einträge bearbeiten
+import json
+ 
+class JSON:
+    def __init__(self,inputFile,outputFile):
+        self.inputFile = inputFile
+        self.outputFile = outputFile
+   
+    def jsonBearbeiten(self,index,key,newValue):
+        with open(self.inputFile,"r") as jsonFile:
+            currentData = json.load(jsonFile)
+ 
+        currentData[index][key] = newValue
+ 
+        with open(self.outputFile,"w") as jsonFile:
+            json.dump(currentData,jsonFile)
+ 
+ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
+ini.jsonBearbeiten(1,"name","ChangedTestName")
 
 
 
