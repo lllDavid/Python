@@ -51,7 +51,7 @@ class JSON:
     def __init__(self,inputFile,outputFile):
         self.inputFile = inputFile
         self.outputFile = outputFile
-   
+    
     def jsonBearbeiten(self,newData):
         with open(self.inputFile,"r") as jsonFile:
             currentData = json.load(jsonFile)
