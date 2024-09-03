@@ -3,7 +3,7 @@ import mariadb
 def create():
     mydb = mariadb.connect(
         host='localhost',
-        user='david',
+        user='user',
         password='123456',
         port=3306,
     )
