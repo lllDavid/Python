@@ -12,7 +12,6 @@ def search():
     mycursor = mydb.cursor()
 
     suchbegriff = input("Suchbegriff: ")
-    #Suchfilter
     suchen = f"SELECT * FROM kunden WHERE ID LIKE '%{suchbegriff}%' OR LastName LIKE '%{suchbegriff}%' OR FirstName LIKE '%{suchbegriff}%' OR Ort LIKE '%{suchbegriff}%' OR Addresse LIKE '%{suchbegriff}%'"
 
     mycursor.execute(suchen)

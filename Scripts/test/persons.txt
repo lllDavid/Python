@@ -1,3 +1,3 @@
-David, 27
-Daniel, 25
-Sammy, 20
+David, 24
+Alex, 25
+Tobias, 20

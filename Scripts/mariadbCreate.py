@@ -19,9 +19,9 @@ def create():
         (1,"Meier", "Max", "Berlin", "Berlin-Straße 42"),
         (2,"Müller","Anna", "München", "Münchnerweg 23"),
         (3,"Musterman", "Peter", "Hamburg", "Hamburger Allee 12c"),
-        (4,"Jakob", "Daniel", "Dortmund", "Dortmund Straße 34"),
-        (5,"Droc", "Sammy","Bremen", "Bremenweg 32d"),
-        (6,"Wagner", "David","Rosenheim", "Rosenheimer Straße 23d")
+        (4,"Meier", "Alex", "Dortmund", "Dortmund Straße 34"),
+        (5,"Hansen", "Markus","Bremen", "Bremenweg 32d"),
+        (6,"Doe", "John","Rosenheim", "Rosenheimer Straße 23d")
     ]
 
     einfuegen = "INSERT INTO kunden (ID, LastName, FirstName, Ort, Addresse) VALUES (%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE ID=ID"  # Verhindert doppelte Einträge
