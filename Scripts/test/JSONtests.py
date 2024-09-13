@@ -18,7 +18,7 @@ class Person:
         with open("Aufgabe1Persons.json", "w") as jsonFile:
             json.dump(jsonList, jsonFile)
 
-persons = [Person("David", 27), Person("Maxwell", 25), Person("Tyler", 20)]
+persons = [Person("David", 27), Person("Marco", 25), Person("Jens", 20)]
 
 Person.personObjectToJson(persons)
 

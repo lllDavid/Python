@@ -24,7 +24,7 @@ def create():
         (6,"Doe", "John","Rosenheim", "Rosenheimer Straße 23d")
     ]
 
-    einfuegen = "INSERT INTO kunden (ID, LastName, FirstName, Ort, Addresse) VALUES (%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE ID=ID"  # Verhindert doppelte Einträge
+    einfuegen = "INSERT INTO kunden (ID, LastName, FirstName, Ort, Addresse) VALUES (%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE ID=ID"  
 
     for d in daten:
         mycursor.execute(einfuegen, d)
