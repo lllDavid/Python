@@ -8,7 +8,7 @@ def doubleNumbers(wert):
     double = lambda x : x * 2
     doubledNumber = double(wert)
     print(doubledNumber)
-doubleNumbers((int(input("Geben sie eine Zahl zum verdoppeln an: "))))
+doubleNumbers((int(input("Geben sie eine Zahl zum verdoppeln ein: "))))
 
 #3)
 from itertools import groupby
