@@ -8,13 +8,14 @@ def scan_ports(target, start_port, end_port):
         sock.settimeout(1)  
 
         try:
+            print(f"Scanning {target}:{port}...") 
             result = sock.connect_ex((target, port))
-
             if result == 0:
                 open_ports.append(port)
             sock.close()
-        except socket.error:
-            pass
+        except Exception as e:
+            print(f"Error scanning {target}:{port} - {e}")  
+            sock.close()
 
     return open_ports
 
