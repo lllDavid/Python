@@ -1,17 +1,9 @@
-nums = [2,3,6,4]
-target = 9
-
-def twoSum(nums, target):
-    i = 0
-    while (i < len(nums)):
-        j = i + 1 
-        while(j < len(nums)):
-            if (nums[i] + nums[j] == target):
-                return [i,j]
-            else:
-                j = j + 1
-        else:
-            i = i + 1
-print(twoSum(nums,target))
-
-            
+def twoSum(numbers, target):
+    complement = {}
+    for i, num in enumerate(numbers):
+        if target - num in complement:
+            return [complement[target - num], i]
+        complement[num] = i
+numbers = [2,3,4,6]
+target = 7
+print(twoSum(numbers, target))
