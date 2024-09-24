@@ -3,7 +3,6 @@ target = 9
 
 def twoSum(nums, target):
     i = 0
-    j = i +1
     while (i < len(nums)):
         j = i + 1 
         while(j < len(nums)):
