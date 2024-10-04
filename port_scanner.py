@@ -20,9 +20,9 @@ def scan_ports(target, start_port, end_port):
     return open_ports
 
 if __name__ == "__main__":
-    target_host = "127.0.0.1"
+    target_host = ""
     start_port = 1
-    end_port = 1024
+    end_port = 100
 
     open_ports = scan_ports(target_host, start_port, end_port)
 
