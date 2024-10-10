@@ -18,19 +18,15 @@ class Person:
         with open("Aufgabe1Persons.json", "w") as jsonFile:
             json.dump(jsonList, jsonFile)
 
-persons = [Person("David", 27), Person("Marco", 25), Person("Jens", 20)]
+persons = [Person("Andreas", 27), Person("Nico", 25), Person("Tim", 20)]
 
 Person.personObjectToJson(persons)
-
-
 
 #Aufgabe 2
 with open("Aufgabe1Persons.json", "r") as jsonFile:
     loadedJson = json.load(jsonFile)
     for entry in loadedJson:
         person = Person(entry['name'], entry['age'])
-
-
 
 #Aufgabe3
 persons = []
@@ -42,9 +38,7 @@ with open("persons.txt","r") as txtFile:
  
 with open("Aufgabe3Persons.json","w") as jsonFile:
     json.dump(persons,jsonFile)
-   
- 
- 
+
 #Aufgabe4
 #Hinzufügen von Einträgen
 class JSON:
@@ -63,8 +57,6 @@ class JSON:
  
 ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
 ini.jsonBearbeiten(["Alex",30])
-
-
 
 #Einträge bearbeiten
 import json
@@ -85,8 +77,6 @@ class JSON:
  
 ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
 ini.jsonBearbeiten(1,"name","ChangedTestName")
-
-
 
 #Dynamisches Laden von Dateien
 # Aufgabe 5
