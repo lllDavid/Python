@@ -1,11 +1,11 @@
 import socket
 
-addr = ""
-port = ""
+host = ""
+port = "5"
 
-def connect():
+def connect(host,port):
     b_socket = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
-    b_socket.bind(addr,port)
+    b_socket.bind(host,port)
     b_socket.listen(1)
     print("Ready to receive data")
     while True:
@@ -13,6 +13,6 @@ def connect():
         print(f"Connected devices {conn}")
         
 
-connect()
+connect(host,port)
 
 
