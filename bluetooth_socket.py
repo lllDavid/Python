@@ -10,6 +10,8 @@ def connect():
     print("Ready to receive data")
     while True:
         conn, addr = b_socket.accept()
+        print(f"Connected devices {conn}")
+        
 
 connect()
 
