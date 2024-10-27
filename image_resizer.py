@@ -11,4 +11,4 @@ def resize_images(directory, size):
             print(f"Resized {filename}")
 
 if __name__ == "__main__":
-    resize_images("/path/to/your/images", (800, 600))  # Resize to 800x600
+    resize_images("/path/to/your/images", (800, 600))
