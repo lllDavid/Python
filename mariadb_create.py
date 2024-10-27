@@ -17,11 +17,11 @@ def create():
 
     daten = [
         (1,"Meier", "Max", "Berlin", "Berlin-Straße 42"),
-        (2,"Müller","Anna", "München", "Münchnerweg 23"),
+        (2,"Müller", "Anna", "München", "Münchnerweg 23"),
         (3,"Musterman", "Peter", "Hamburg", "Hamburger Allee 12c"),
-        (4,"Meier", "Alex", "Dortmund", "Dortmund Straße 34"),
+        (4,"Lehner", "Alex", "Dortmund", "Dortmund Straße 34"),
         (5,"Hansen", "Markus","Bremen", "Bremenweg 32d"),
-        (6,"Doe", "John","Rosenheim", "Rosenheimer Straße 23d")
+        (6,"Werter", "Hans","Rosenheim", "Rosenheimer Straße 23d")
     ]
 
     einfuegen = "INSERT INTO kunden (ID, LastName, FirstName, Ort, Addresse) VALUES (%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE ID=ID"  
