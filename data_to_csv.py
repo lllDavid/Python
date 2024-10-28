@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-PATH = ""
+PATH = " "
 
 files = os.listdir(f'{PATH}')
 raw_data = {'fname': [], 'label': []}
