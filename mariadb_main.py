@@ -1,5 +1,6 @@
-from Python.mariadb_create import create
-from Python.mariadb_search import search
+from mariadb_create import create_db
+from mariadb_search import search_db
 
-create()
-search()
+if __name__ == "__main__":
+    create_db()
+    search_db()

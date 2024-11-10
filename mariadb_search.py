@@ -1,6 +1,6 @@
 import mariadb
 
-def search():
+def search_db():
     mydb = mariadb.connect(
         host='localhost',
         user='user',

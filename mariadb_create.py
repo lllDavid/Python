@@ -1,6 +1,6 @@
 import mariadb
 
-def create():
+def create_db():
     mydb = mariadb.connect(
         host='localhost',
         user='user',
