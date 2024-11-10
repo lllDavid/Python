@@ -1,3 +1,3 @@
-import json_reader
+from json_reader import jsonReader
 
-json_reader.jsonReader("daten.json")
+jsonReader("daten.json")
