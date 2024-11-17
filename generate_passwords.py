@@ -2,7 +2,7 @@ import secrets
 import string
 from argon2 import PasswordHasher
 
-def generate_random_password(length=20, salt_length=8):
+def generate_random_password(length=30, salt_length=8):
     """Generates a random password with cryptographically secure randomness."""
     
     # Characters for password generation (expanded character set)
@@ -53,7 +53,7 @@ def verify_password(hashed_password, password):
 
 # Example Usage
 if __name__ == "__main__":
-    password_length = 20
+    password_length = 30
     salt_length = 8
     
     # Step 1: Generate a strong random password
