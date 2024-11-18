@@ -1,6 +1,6 @@
 import math
 
-def calculate_entropy(password):
+def calculate_entropy(password) -> float:
     char_set_size = 0
     
     if any(c.islower() for c in password):  # Lowercase

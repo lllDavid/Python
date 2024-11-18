@@ -7,84 +7,84 @@ class Person:
         self.name = name
         self.age = age
 
-    def personObjectToJson(list):
-        jsonList = []
+    def person_object_to_json(self, list):
+        json_list = []
         for entry in list:
-            jsonFormat = {
+            json_format = {
                 "name": entry.name,
                 "age": entry.age
             }
-            jsonList.append(jsonFormat)
-        with open("Aufgabe1Persons.json", "w") as jsonFile:
-            json.dump(jsonList, jsonFile)
+            json_list.append(json_format)
+        with open("persons.json", "w") as json_file:
+            json.dump(json_list, json_file)
 
-persons = [Person("Andreas", 27), Person("Nico", 25), Person("Tim", 20)]
-
-Person.personObjectToJson(persons)
+person = Person("Mark", 23)
+person.person_object_to_json(person)
 
 # Aufgabe 2
-with open("Aufgabe1Persons.json", "r") as jsonFile:
-    loadedJson = json.load(jsonFile)
-    for entry in loadedJson:
+with open("persons.json", "r") as json_file:
+    json_data = json.load(json_file)
+    for entry in json_data:
         person = Person(entry['name'], entry['age'])
 
-# Aufgabe3
+# Aufgabe 3
 persons = []
  
-with open("persons.txt","r") as txtFile:
-    for line in txtFile:
+with open("persons.txt","r") as txt_file:
+    for line in txt_file:
         name,age = line.strip().split(", ")
         persons.append({"name": name, "age": int(age)})
  
-with open("Aufgabe3Persons.json","w") as jsonFile:
-    json.dump(persons,jsonFile)
+with open("persons2.json","w") as json_file:
+    json.dump(persons, json_file)
 
-# Aufgabe4
-class JSON:
-    def __init__(self,inputFile,outputFile):
-        self.inputFile = inputFile
-        self.outputFile = outputFile
+# Aufgabe 4
+class JSON1:
+    def __init__(self,input_file, output_file):
+        self.input_file = input_file
+        self.output_file = output_file
     
-    def jsonBearbeiten(self,newData):
-        with open(self.inputFile,"r") as jsonFile:
-            currentData = json.load(jsonFile)
+    def process_json(self,newData):
+        with open(self.input_file,"r") as json_file:
+            current_data = json.load(json_file)
  
-        currentData.append({"name": newData[0], "age": newData[1]})
+        current_data.append({"name": newData[0], "age": newData[1]})
  
-        with open(self.outputFile,"w") as jsonFile:
-            json.dump(currentData,jsonFile)
+        with open(self.output_file,"w") as json_file:
+            json.dump(current_data, json_file)
  
-ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
-ini.jsonBearbeiten(["Alex",30])
+j1 = JSON1("persons2.json","persons3.json")
+j1.process_json(["Alex", 30])
 
-class JSON:
-    def __init__(self,inputFile,outputFile):
-        self.inputFile = inputFile
-        self.outputFile = outputFile
+class JSON2:
+    def __init__(self,input_file, output_file):
+        self.input_file = input_file
+        self.output_file = output_file
    
-    def jsonBearbeiten(self,index,key,newValue):
-        with open(self.inputFile,"r") as jsonFile:
-            currentData = json.load(jsonFile)
+    def process_json(self, index, key, new_value):
+        with open(self.input_file,"r") as json_file:
+            current_data = json.load(json_file)
  
-        currentData[index][key] = newValue
+        current_data[index][key] = new_value
  
-        with open(self.outputFile,"w") as jsonFile:
-            json.dump(currentData,jsonFile)
+        with open(self.output_file,"w") as json_file:
+            json.dump(current_data,json_file)
  
-ini = JSON("Aufgabe3Persons.json","Aufgabe4Output.json")
-ini.jsonBearbeiten(1,"name","ChangedTestName")
+j2 = JSON2("persons2.json","persons3.json")
+j2.process_json(1,"name", "Changed name")
 
 # Aufgabe 5
-
-class Modul:
-    def importModul(modulName, modulFunktion, *funktionsParameter):  
-        modul = importlib.import_module(modulName) 
-        print("Name des Moduls:", modul.__name__) 
+class Module:
+    def import_module(self, module_name, modul_function, *function_parameters):  
+        my_module = importlib.import_module(module_name) 
+        print("Name: ", my_module.__name__) 
         
-        funktion = getattr(modul, modulFunktion)
-        funktion(*funktionsParameter)
-  
-Modul.importModul("modul", "addition", 2, 3)
+        my_function = getattr(my_module, modul_function)
+        my_function(*function_parameters)
+
+m = Module()
+m.import_module("my_module", "add", 2, 3)
+
 
 
 

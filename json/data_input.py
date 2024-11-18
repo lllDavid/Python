@@ -1,13 +1,11 @@
 import json
 
-class DatenEingabe:
-    def userInput():
-        userInputData = {
-            "name": str(input("Name: ")),
-            "alter": int(input("Alter: "))
-        }
-        
-        with open("daten.json", "w") as datei:
-            json.dump(userInputData, datei)
-        
-DatenEingabe.userInput()
+def user_input() -> None:
+    user_data = {
+        "name": str(input("Name: ")),
+        "age": int(input("Age: "))
+    }
+    
+    with open("data.json", "w") as file:
+        json.dump(user_data, file)
+

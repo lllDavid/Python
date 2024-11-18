@@ -10,7 +10,7 @@ class Daten:
                 "e-mail": input("E-Mail eingeben: ")
             }
             self.liste.append(entry)  
-            eingabe = input("Weitere Daten eingeben? Ja (Taste drücken) Nein (Nein eingeben): ")
+            eingabe = input("Weiter? Ja (Taste drücken) Nein (Nein eingeben): ")
             if eingabe == "Nein":
                 break
 

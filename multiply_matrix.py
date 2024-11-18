@@ -1,4 +1,4 @@
-def multiply_matrix(matrix1, matrix2):
+def multiply_matrix(matrix1, matrix2) -> list[list[int]]:
     row1 = len(matrix1)
     col1 = len(matrix1[0]) 
     row2 = len(matrix2)

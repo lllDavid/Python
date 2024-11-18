@@ -22,7 +22,7 @@ def search_db():
         for e in ergebnisse:
             print(e)
     else:
-        print(f"Der Begriff '{suchbegriff}' ist nicht vorhanden!")
+        print(f"Der Begriff '{suchbegriff}' ist nicht vorhanden")
 
     mydb.close()
     
