@@ -3,13 +3,13 @@ import math
 def calculate_entropy(password) -> float:
     char_set_size = 0
     
-    if any(c.islower() for c in password):  # Lowercase
+    if any(c.islower() for c in password):  
         char_set_size += 26
-    if any(c.isupper() for c in password):  # Uppercase
+    if any(c.isupper() for c in password):  
         char_set_size += 26
-    if any(c.isdigit() for c in password):  # Digits
+    if any(c.isdigit() for c in password):  
         char_set_size += 10
-    if any(c in "!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?`~" for c in password):  # Special characters
+    if any(c in "!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?`~" for c in password):  
         char_set_size += 32
 
     password_length = len(password)
@@ -18,6 +18,6 @@ def calculate_entropy(password) -> float:
     
     return entropy
 
-password = "P@ssw0rd123"
+password = "8e)?/?a/Quz%KdiVig#(^BCq9C>J-?"
 entropy = calculate_entropy(password)
 print(f"Entropy of the password '{password}' is: {entropy:.2f} bits")
