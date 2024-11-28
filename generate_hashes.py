@@ -20,9 +20,9 @@ def generate_random_password(length=30, salt_length=8):
 
 def hash_password(password):
     ph = PasswordHasher(
-        time_cost=3,  # Number of iterations (time cost)
-        memory_cost=2**16,  # Memory cost (in KB)
-        parallelism=1  # Parallelism factor (number of threads)
+        time_cost=3,  
+        memory_cost=2**16,  
+        parallelism=1  
     )
 
     hashed_password = ph.hash(password)
