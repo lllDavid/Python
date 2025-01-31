@@ -1,0 +1,1 @@
+items = {1:"phone", 2:"laptop"}
