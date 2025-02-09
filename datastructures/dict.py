@@ -9,6 +9,9 @@ dict1 = {"Username:":username, "Email":email, "Password:":password}
 age = 23
 dict1.update({"Age":age})
 
+# Delete
+dict1.pop("Email")
+
 # Print
 print(dict1)
 
@@ -27,11 +30,7 @@ print(values)
 for key, value in dict1.items():
     print(f"Key: {key}, Value: {value}")
 
-# Delete
-dict1.pop("Email")
-print(dict1)
-
 # Dictionary comprehension
 dict1 = {"1":1, "2":2, "3":3}
-dict2 = { v + 1 for k,v in dict1.items() if v > 2}
+dict2 = { v + 1 for v in dict1.values() if v > 2}
 print(dict2)
