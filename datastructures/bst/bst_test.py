@@ -16,14 +16,27 @@ class Node:
             else:
                 self.right.insert(value)
 
-node = Node(10)
-node.insert(5)
-node.insert(4)
-node.insert(3)
-node.insert(7)
-node.insert(11)
+    def inorder_traversal(self):
+        if self.left:
+            self.left.inorder_traversal()
+        print(self.value)
+        if self.right:
+            self.right.inorder_traversal()
 
-print(node.left.left.left.left.right.value)
+node = Node(6)
+node.insert(5)
+node.insert(2)
+node.insert(4)
+node.insert(1)
+node.insert(2)
+node.insert(4)
+node.insert(19)
+node.insert(29)
+node.insert(11)
+node.insert(4)
+node.insert(2)
+
+node.inorder_traversal()
 
 
         
