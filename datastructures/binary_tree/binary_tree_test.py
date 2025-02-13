@@ -23,6 +23,24 @@ class Node:
         if self.right:
             self.right.inorder_traversal()
 
+    def find_value(self, value):
+        if value < self.value:
+            if self.left is None:
+                return False
+            else:
+                return self.left.find_value(value)
+        elif value > self.value:
+            if self.right is None:
+                return False
+            else:
+                return self.right.find_value(value)
+        else:
+            return True
+
+
+
+
+
     
 node = Node(6)
 node.insert(5)
@@ -30,11 +48,8 @@ node.insert(2)
 node.insert(4)
 node.insert(1)
 node.insert(2)
-node.insert(4)
-node.insert(19)
-node.insert(29)
-node.insert(11)
-node.insert(4)
-node.insert(2)
+node.insert(3)
 
-node.inorder_traversal()
+
+print(node.find_value(3))
+
