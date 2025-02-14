@@ -27,13 +27,11 @@ class Node:
         if value < self.value:
             if self.left is None:
                 return False
-            else:
-                self.left.find(value)
+            return self.left.find(value)
         elif value > self.value:
             if self.right is None:
                 return False
-            else:
-                self.right.find(value)
+            return self.right.find(value)
         else:
             return True
 
@@ -46,8 +44,7 @@ node.insert(7)
 node.insert(4)
 
 node.inorder_traversal()
-
-print(node.insert(22))
+node.insert(22)
 print(node.find(22))
 print(node.find(33))
 
