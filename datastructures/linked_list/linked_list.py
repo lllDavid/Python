@@ -16,3 +16,12 @@ class LinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+
+node = Node(1)
+
+ll = LinkedList()
+ll.append(2)
+ll.append(3)
+ll.append(4)
+
+print(ll)
