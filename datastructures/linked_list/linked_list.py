@@ -17,10 +17,19 @@ class LinkedList:
                 current = current.next
             current.next = new_node
 
-node = Node(1)
+    def print_list(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
 
-ll = LinkedList()
-ll.append(2)
-ll.append(3)
-ll.append(4)
+linked_list = LinkedList()
 
+linked_list.append(1)
+linked_list.append(2)
+linked_list.append(3)
+linked_list.append(4)
+linked_list.append(5)
+
+linked_list.print_list()
