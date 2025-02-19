@@ -9,7 +9,18 @@ my_list.insert(5,6)
 my_list.remove(5)
 my_list.pop(0)
 
-# Print
-print(my_list)
+# Access a value
+print(my_list[0])
 
-# Access values
+# Print all values:
+print(my_list[0:])
+
+# Print all values in reverse:
+print(my_list[::-1])
+
+# Iterate over values
+for i in my_list:
+    print(i)
+
+# List comprehension
+my_list2 = [i**2 for i in my_list if i > 3]

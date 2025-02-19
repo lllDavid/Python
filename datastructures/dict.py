@@ -12,9 +12,6 @@ dict1.update({"Age":age})
 # Delete
 dict1.pop("Email")
 
-# Print
-print(dict1)
-
 # Access value by key
 print(dict1["Age"])
 
