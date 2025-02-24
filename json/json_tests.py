@@ -44,11 +44,11 @@ class JSON1:
         self.input_file = input_file
         self.output_file = output_file
     
-    def process_json(self,newData):
+    def process_json(self,new_data):
         with open(self.input_file,"r") as json_file:
             current_data = json.load(json_file)
  
-        current_data.append({"name": newData[0], "age": newData[1]})
+        current_data.append({"name": new_data[0], "age": new_data[1]})
  
         with open(self.output_file,"w") as json_file:
             json.dump(current_data, json_file)
