@@ -1,18 +1,33 @@
-class Count:
-    def __init__(self):
-        self.value = 1
+class MyCollection:
+    def __init__(self, data):
+        self.data = data
+        
+    def __getitem__(self, key):
+        if isinstance(key, slice):
+            # Handle slicing with bounds checking
+            start, stop, step = key.indices(len(self.data))
+            return [self.data[i] for i in range(start, stop, step)]
+        elif isinstance(key, int):
+            # Handle index access
+            return self.data[key]
+        else:
+            raise KeyError("Invalid key type")
 
-    def __add__(self, other):
-        return self.value + other.value
-    
-    def count_up(self):
-        self.value = self.value + 1
-    
-    def count_down(self):
-        self.value = self.value - 1
+# Example usage:
+obj = MyCollection([1, 2, 3, 4, 5])
+print(obj[2])      # Output: 3
+print(obj[1:4:2])  # Output: [2, 4]
 
-count1 = Count()
-count2 = Count()
+class Calculator:
+    def __init__(self, value):
+        self.value = value
+        
+    def __call__(self, *args, **kwargs):
+        if args:
+            return self.value + sum(args)
+        return self.value
 
-print(count1+count2)
-
+# Example usage:
+calc = Calculator(10)
+print(calc(5, 10))  # Output: 25 (10 + 5 + 10)
+print(calc())       # Output: 10

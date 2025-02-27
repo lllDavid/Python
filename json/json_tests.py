@@ -1,7 +1,6 @@
 import json
 import importlib 
 
-# Aufgabe 1
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -21,13 +20,11 @@ class Person:
 person = Person("Mark", 23)
 person.person_object_to_json(person)
 
-# Aufgabe 2
 with open("persons.json", "r") as json_file:
     json_data = json.load(json_file)
     for entry in json_data:
         person = Person(entry['name'], entry['age'])
 
-# Aufgabe 3
 persons = []
  
 with open("persons.txt","r") as txt_file:
@@ -38,7 +35,6 @@ with open("persons.txt","r") as txt_file:
 with open("persons2.json","w") as json_file:
     json.dump(persons, json_file)
 
-# Aufgabe 4
 class JSON1:
     def __init__(self,input_file, output_file):
         self.input_file = input_file
@@ -73,7 +69,6 @@ class JSON2:
 j2 = JSON2("persons2.json","persons3.json")
 j2.process_json(1,"name", "Changed name")
 
-# Aufgabe 5
 class Module:
     def import_module(self, module_name, modul_function, *function_parameters):  
         my_module = importlib.import_module(module_name) 

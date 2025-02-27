@@ -1,29 +1,29 @@
 import json
 
-class Daten:
+class Data:
     def __init__(self):
-        self.liste = [] 
+        self.list = [] 
         while True:
             entry = {
-                "name": input("Namen eingeben: "),
-                "beruf": input("Beruf eingeben: "),
-                "e-mail": input("E-Mail eingeben: ")
+                "name": input("Enter name: "),
+                "occupation": input("Enter occupation: "),
+                "e-mail": input("Enter e-mail: ")
             }
-            self.liste.append(entry)  
-            eingabe = input("Weiter? Ja (Taste drücken) Nein (Nein eingeben): ")
-            if eingabe == "Nein":
+            self.list.append(entry)  
+            input_value = input("Continue? Press any key for Yes, type 'No' for No: ")
+            if input_value.lower() == "no":
                 break
 
     def save_json(self, filename='data.json'):
         with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(self.liste, f, ensure_ascii=False, indent=4)
+            json.dump(self.list, f, ensure_ascii=False, indent=4)
         print(f"Data saved to {filename}")
 
-class DatenAusgabe(Daten):
+class DataOutput(Data):
     def print_json(self):
-        for entry in self.liste:
+        for entry in self.list:
             print(json.dumps(entry))
 
-y = DatenAusgabe()
-y.save_json()
-y.print_json()
+x = DataOutput()
+x.save_json()
+x.print_json()

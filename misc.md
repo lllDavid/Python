@@ -1,11 +1,3 @@
-Lambda Functions
-
-Scope and Lifetime
-
-Dictionary and set comprehensions
-
-Consuming REST APIs (using requests)
-
 Metaclasses
 Multiple inheritance (MRO – Method Resolution Order)
 Abstract base classes (ABCs)
