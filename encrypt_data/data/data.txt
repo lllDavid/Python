@@ -1,0 +1,3 @@
+001, Sarah Smith, (555) 123-4567, 123 Elm Street, SF, CA
+002, David Johnson, (555) 234-5678, 456 Oak Street, SF, CA
+003, Michael Brown, (555) 567-8901, 321 Maple St, SF, CA 
