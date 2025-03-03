@@ -7,18 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/senior-account-manager-m-w-d-076d68296d08</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-03-07</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/art-director-senior-ux-ui-designer-digitale-medien-m-w-d-ac83827feaf0</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-05-13</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/java-softwareentwickler-full-stack-m-w-d-08d2c6930c58</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-09-04</lastmod>
@@ -55,12 +43,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/liferay-developer-m-w-d-20d2ec9cb83b</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-25</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/senior-softwareentwickler-m-w-x-c-9984031ab37b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-11-29</lastmod>
@@ -69,7 +51,7 @@
   <url>
     <loc>https://app.instaffo.com/job/cloud-solution-architect-aa6147fd079c</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -88,12 +70,6 @@
     <loc>https://app.instaffo.com/job/softwareentwickler-sps-plc-m-w-d-18cc903e939a</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-08-22</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/event-manager-m-w-d-e20b14f8f217</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-07-10</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -130,6 +106,12 @@
     <loc>https://app.instaffo.com/job/mitarbeiter-backoffice-m-w-d-0a26318b6d29</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-31</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/fullstack-engineer-m-w-d-19e9f9dcae78</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -259,6 +241,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/frontend-entwickler-m-w-x-public-service-e93e55cc5b6a</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/technical-project-manager-e-commerce-mensch-22eb98748691</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-10-21</lastmod>
@@ -327,13 +315,13 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-data-engineer-m-w-d-b9c53128aea7</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://app.instaffo.com/job/senior-devops-engineer-m-w-d-2f2f693cf931</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-11-08</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -368,12 +356,6 @@
   </url>
   <url>
     <loc>https://app.instaffo.com/job/platform-cloud-solutions-architect-m-f-d-6ed9b079704a</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/software-engineer-real-time-applications-m-f-d-3478624ff88c</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-26</lastmod>
     <priority>1.0</priority>
@@ -451,6 +433,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/software-engineer-fullstack-m-w-d-01625eb3bfec</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/berater-system-management-m-w-d-d5da0c63e332</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-07-18</lastmod>
@@ -472,12 +460,6 @@
     <loc>https://app.instaffo.com/job/it-security-administrator-w-m-d-7eb893a4708b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/system-administrator-in-m-w-d-9542cc5dc28a</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -679,12 +661,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/software-architekt-m-w-x-8dc7a47c07eb</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-10-25</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/senior-c-fullstack-software-entwickler-m-w-d-100-remote-48304a6ff0e1</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-11-25</lastmod>
@@ -829,12 +805,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/customer-success-manager-activation-m-w-d-8067d12f281f</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-12</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/it-administrator-desktop-support-m-w-d-cd586b39eb6d</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-10-24</lastmod>
@@ -843,7 +813,7 @@
   <url>
     <loc>https://app.instaffo.com/job/customer-success-manager-engagement-m-w-d-3a8f2c60da97</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -897,7 +867,7 @@
   <url>
     <loc>https://app.instaffo.com/job/azrue-consultant-all-genders-745241e4e063</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -997,12 +967,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/senior-datenbank-entwickler-m-w-d-a49403183eea</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-12</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/vertriebsmitarbeiter-softwarevertrieb-m-w-d-4cd8032a6089</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-12</lastmod>
@@ -1057,12 +1021,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/werkstudent-vertrieb-online-marketing-c2fe0a0a156f</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-18</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/ux-ui-designer-m-w-d-d76d200b123c</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-20</lastmod>
@@ -1071,7 +1029,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-fullstack-shopware-entwicklerin-52ecec8f2193</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-12-28</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -1537,6 +1495,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/product-owner-d-f-m-bcd2a6d4dc68</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/customer-support-manager-d-w-m-9f70addc6c01</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-07</lastmod>
@@ -1663,6 +1627,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/teamassistenz-w-m-d-vertrieb-in-teilzeit-f2950dd619f0</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/systemintegrator-it-security-specialist-m-w-d-c9284e193dd9</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-17</lastmod>
@@ -1702,12 +1672,6 @@
     <loc>https://app.instaffo.com/job/key-account-manager-advertiser-m-w-d-ee92c8d49a7c</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-13</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/junior-account-manager-m-w-d-7733dd3e4308</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-05-13</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -1774,12 +1738,6 @@
     <loc>https://app.instaffo.com/job/senior-business-analyst-insurance-m-w-d-d274d7a4fe19</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-28</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/crm-product-owner-m-w-d-a08bd0417274</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-08-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -2235,7 +2193,7 @@
   <url>
     <loc>https://app.instaffo.com/job/sales-manager-m-w-d-2e9c94f1ba71</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -2463,7 +2421,7 @@
   <url>
     <loc>https://app.instaffo.com/job/customer-success-manager-m-w-d-d424b5e67f07</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -2590,12 +2548,6 @@
     <loc>https://app.instaffo.com/job/it-kundenbetreuung-first-second-level-support-m-w-d-1d0c4002f32d</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-11-22</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/copy-technical-product-owner-f-m-d-f803e698cfd7</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-05-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -2755,12 +2707,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/it-kundensupport-79be35bde052</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-12-25</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/key-account-manager-m-w-x-softwareentwicklung-369f96b22581</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-04</lastmod>
@@ -2818,12 +2764,6 @@
     <loc>https://app.instaffo.com/job/senior-consultant-sap-ux-all-genders-062a09afa465</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-07-26</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/it-kundensupport-1st-level-support-m-w-d-e585e84dfbda</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-10-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -3067,12 +3007,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/projektmanager-all-genders-fur-it-infrastruktur-09f4b441ffce</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-09-12</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/fachinformatiker-m-w-d-fur-systemintegration-project-engineer-m-w-d-2a3c331b705c</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-08-20</lastmod>
@@ -3094,12 +3028,6 @@
     <loc>https://app.instaffo.com/job/senior-software-engineer-react-golang-f-m-d-c7c91960cd52</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-10-25</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/presales-consultant-security-w-m-d-7699fe8c0871</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-14</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -3471,13 +3399,13 @@
   <url>
     <loc>https://app.instaffo.com/job/software-entwickler-backend-m-w-d-9747aa2b7c64</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-09-01</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://app.instaffo.com/job/senior-backend-entwickler-produktion-m-w-d-46233c2242c5</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-19</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -3543,7 +3471,7 @@
   <url>
     <loc>https://app.instaffo.com/job/c-linux-entwickler-in-1ae7d7ff1603</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-27</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -3643,12 +3571,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/lead-technical-project-management-m-w-d-1699a2a0659d</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-08-14</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/key-account-manager-it-beratung-m-w-d-f3e72b60eebe</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-09-12</lastmod>
@@ -3658,12 +3580,6 @@
     <loc>https://app.instaffo.com/job/prozess-und-anwendungsspezialist-inhouse-berater-inhouse-consultant-m-w-d-sap-tm-sap-ewm-fe7ccb59ecce</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-09-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/spezialist-reporting-m-w-d-sql-datenauswertung-4d645a96adbd</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-14</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -4099,6 +4015,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/operations-manager-linux-administrator-m-w-d-12752aaeaf68</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/sales-manager-in-im-startup-83b1cd87599c</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-10-01</lastmod>
@@ -4465,12 +4387,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/devops-engineer-m-f-d-39c5d11b998a</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-18</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/manager-in-client-services-all-genders-munchen-595291aa1c21</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-12</lastmod>
@@ -4546,12 +4462,6 @@
     <loc>https://app.instaffo.com/job/technical-sales-engineer-m-w-d-punchout-7007-8c0e7e9af4da</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-09-26</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/ux-ui-designer-c77a2206ade3</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-22</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -4654,12 +4564,6 @@
     <loc>https://app.instaffo.com/job/it-systemadministrator-m-w-d-schwerpunkt-serveradministration-it-infrastruktur-e13ecad26ba9</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-23</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/werkstudent-marketing-kommunikation-m-w-d-4874ce585cc7</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -4797,7 +4701,7 @@
   <url>
     <loc>https://app.instaffo.com/job/sales-und-vertriebsmanager-touristische-produkte-m-w-d-vollzeit-in-munchen-746a47cc9894</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-11-22</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -4887,7 +4791,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-frontend-entwickler-m-w-d-c9fde965b9df</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-06</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -4897,9 +4801,21 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/business-analyst-m-w-d-4791f480cbaf</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/senior-full-stack-developer-in-rechnungserstellung-w-d-m-056e9e2ab738</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-14</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/software-engineer-backend-m-w-d-e42441a29dd2</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -5002,12 +4918,6 @@
     <loc>https://app.instaffo.com/job/senior-it-consultant-all-genders-endpoint-management-bfb0a1bd6eda</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-31</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/it-supporter-m-w-d-839afa506c4b</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-12-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -5155,6 +5065,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/art-director-m-w-d-15e9cd6cb808</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/it-systemadministrator-m-w-d-e-commerce-und-erp-9867616b8d4f</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-13</lastmod>
@@ -5176,12 +5092,6 @@
     <loc>https://app.instaffo.com/job/senior-data-engineer-e5c93b5de7b3</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-23</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/junior-it-sales-engineer-all-genders-dbc792313700</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-10-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -5649,7 +5559,7 @@
   <url>
     <loc>https://app.instaffo.com/job/kundenberatung-vertrieb-crm-m-w-d-eb4d53fc94fa</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-14</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -5757,13 +5667,13 @@
   <url>
     <loc>https://app.instaffo.com/job/quality-engineer-m-w-d-661a5b33c486</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-21</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://app.instaffo.com/job/lead-or-senior-java-engineer-m-w-d-49218cec33b2</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-12-20</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -5805,7 +5715,7 @@
   <url>
     <loc>https://app.instaffo.com/job/security-architekt-all-genders-b1a149c140be</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -5925,7 +5835,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-system-administrator-linux-m-w-d-266530771db8</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-21</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -6127,12 +6037,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/senior-typo3-developer-m-w-d-e2cedaad7070</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-27</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/devops-engineer-9c2350559f4b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-16</lastmod>
@@ -6255,7 +6159,7 @@
   <url>
     <loc>https://app.instaffo.com/job/sales-manager-m-w-d-52b81e7a6840</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-21</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -6268,6 +6172,12 @@
     <loc>https://app.instaffo.com/job/supply-chain-operations-manager-m-w-d-27add62a5765</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-11-29</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/forecast-spezialist-schwerpunkt-excel-m-w-d-e14275682799</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -6388,12 +6298,6 @@
     <loc>https://app.instaffo.com/job/bilanzbuchhalter-w-m-d-0918f4df9703</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-22</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/sales-manager-mobilfunk-access-m-w-d-045e01bf3422</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2024-12-13</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -6526,6 +6430,12 @@
     <loc>https://app.instaffo.com/job/junior-seo-manager-m-w-d-6e00ba73c0ae</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-05</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/senior-art-director-m-w-d-573ad0d03bc0</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -6757,12 +6667,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/sales-manager-b2c-e-mobility-startup-8fa6d9ba1422</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-29</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/it-systemadministrator-m-w-d-9711ea0d405b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-29</lastmod>
@@ -6844,6 +6748,12 @@
     <loc>https://app.instaffo.com/job/head-of-growth-m-w-d-294b92825e8a</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/forecast-spezialist-schwerpunkt-excel-m-w-d-86008d183004</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -7135,12 +7045,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/senior-finance-manager-in-in-cfo-service-m-w-d-95595428b6b7</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-03</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/head-of-marketing-de8ff06c7d64</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-03</lastmod>
@@ -7237,12 +7141,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/sales-manager-m-w-d-im-vertriebsaussendienst-fur-sicherheitslosungen-fb3819930c57</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-21</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/react-typescript-developer-m-w-d-bfed135a70c6</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-23</lastmod>
@@ -7279,12 +7177,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/datacenter-engineer-rechenzentrumstechniker-all-genders-a5bbff89d0d2</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/senior-sales-consultant-it-services-af24c33911cd</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-12</lastmod>
@@ -7306,12 +7198,6 @@
     <loc>https://app.instaffo.com/job/head-of-engineering-m-w-d-5ad5b14d4371</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-13</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/junior-technischer-redakteur-m-w-d-qualitats-und-testmanagement-4f3e07116242</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -7387,18 +7273,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/sap-consultant-controlling-m-w-d-b8b20e08c110</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-07</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/sap-basistechnologie-administrator-m-w-d-86d3558aeef9</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-07</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/sap-consultant-authorization-m-w-d-35d6bd1b5402</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-07</lastmod>
@@ -7438,12 +7312,6 @@
     <loc>https://app.instaffo.com/job/senior-sap-consultant-business-intelligence-analytics-m-w-d-8dda9759c57d</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-18</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/senior-sap-basis-consultant-m-w-d-bbb827f8b808</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-08</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -7599,7 +7467,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-demand-generation-manager-4bea0e28c74c</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-25</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -7690,12 +7558,6 @@
     <loc>https://app.instaffo.com/job/webdesigner-ux-ui-m-w-d-927b7a94a747</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-27</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/e-commerce-manager-m-w-d-ee2a38c60891</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-13</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -7798,12 +7660,6 @@
     <loc>https://app.instaffo.com/job/backendentwickler-in-c59b636196cc</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-10</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/hr-specialist-usa-experience-b27a88105c01</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8073,7 +7929,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-digital-workplace-architect-9125d29079db</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8101,12 +7957,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/vertriebstechniker-ingenieur-innendienst-d6e4100f9757</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-20</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/senior-systemadministrator-mensch-c45d3121fbb7</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-21</lastmod>
@@ -8127,13 +7977,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-digital-workplace-architect-im-consulting-m-w-d-a152ef613267</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/mitarbeiter-customer-service-w-m-d-427ada79238a</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-14</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8239,6 +8083,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/it-mitarbeiter-business-application-support-m-w-d-home-office-moglich-f38df704c149</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/junior-php-developer-m-w-d-82f2e111cbc5</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-11</lastmod>
@@ -8283,7 +8133,7 @@
   <url>
     <loc>https://app.instaffo.com/job/product-manager-m-w-d-software-b2b-c11389783a2c</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8410,18 +8260,6 @@
     <loc>https://app.instaffo.com/job/performance-marketing-manager-m-w-d-6f4734bbc2d7</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-07</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/produktmanager-digitale-losungen-m-w-d-5ebc58a1fbcf</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-23</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/projektmanager-m-w-d-produkte-und-designs-osf-1ce0ea6b6e7c</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8565,7 +8403,7 @@
   <url>
     <loc>https://app.instaffo.com/job/data-engineer-d-w-m-4b9a7efed706</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8625,7 +8463,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-it-netzwerkadministrator-m-w-d-e58b50f37fb5</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8769,7 +8607,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-social-media-manager-m-w-d-9155afff08b2</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-25</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -8869,12 +8707,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/product-owner-m-w-d-ff5ab8148e3f</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-14</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/head-of-sales-b5500786d8ee</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-28</lastmod>
@@ -8911,12 +8743,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/atlassian-consultant-m-w-d-frankfurt-a-m-hybrid-67a59b23a717</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-25</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/it-consultant-d6fccfaff513</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-28</lastmod>
@@ -8938,12 +8764,6 @@
     <loc>https://app.instaffo.com/job/key-account-manager-agency-m-w-d-b2e63b7141f8</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-13</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/campaign-manager-m-w-d-972786d88f12</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-25</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9103,12 +8923,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/senior-devops-engineer-azure-m-w-d-b495a3a71350</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-01-31</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/information-security-engineer-lexware-office-2dcf2fa557dd</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-06</lastmod>
@@ -9145,12 +8959,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/sales-development-representative-m-w-d-5860dda0f8ed</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-19</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://app.instaffo.com/job/it-consultant-im-fintech-bereich-m-w-d-f0ace67f26b8</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-01-31</lastmod>
@@ -9171,7 +8979,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-systemadministrator-m-w-d-d397a5f7b32f</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-19</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9195,13 +9003,13 @@
   <url>
     <loc>https://app.instaffo.com/job/steuerberater-m-w-d-in-augsburg-ulm-oder-nurnberg-be2c9b0027a9</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-04</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://app.instaffo.com/job/steuerassistent-m-w-d-fur-unser-tax-advisory-443039d5501a</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-31</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9255,7 +9063,7 @@
   <url>
     <loc>https://app.instaffo.com/job/trainee-teamleitung-it-systeme-m-w-d-35f0d4429979</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-12</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9279,7 +9087,7 @@
   <url>
     <loc>https://app.instaffo.com/job/it-system-engineer-fur-storage-systeme-all-genders-257ef5d9709c</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-10</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9297,7 +9105,7 @@
   <url>
     <loc>https://app.instaffo.com/job/senior-account-manager-w-m-d-9c0c03cce32b</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9765,7 +9573,7 @@
   <url>
     <loc>https://app.instaffo.com/job/spezialist-m-w-d-umsatzsteuer-in-augsburg-4bae895a547b</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-07</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -9796,12 +9604,6 @@
     <loc>https://app.instaffo.com/job/marketing-manager-m-w-x-6118888de9ac</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-20</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/finanzmathematiker-in-f89ad184cb2c</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10039,6 +9841,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/leiter-finanzbuchhaltung-m-w-d-31559dc279ff</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/senior-software-engineer-m-w-d-9a046836a4a2</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-27</lastmod>
@@ -10090,6 +9898,12 @@
     <loc>https://app.instaffo.com/job/senior-devops-engingeer-mensch-b88a9a0d9764</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/marketing-program-manager-m-f-d-67af922c1950</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10192,12 +10006,6 @@
     <loc>https://app.instaffo.com/job/senior-consultant-m-w-d-software-engineer-cloud-security-compliance-3adcc9ff92bc</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-26</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/senior-full-stack-web-developer-m-w-d-0e4d31a871d1</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10305,13 +10113,13 @@
   <url>
     <loc>https://app.instaffo.com/job/steuerexperte-m-w-d-im-family-office-steuerteam-c8e8a36a0a0d</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-14</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://app.instaffo.com/job/it-spezialist-fur-kunstliche-intelligenz-ki-und-robotic-process-automation-rpa-m-w-d-4af8de117ecf</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-20</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10365,7 +10173,7 @@
   <url>
     <loc>https://app.instaffo.com/job/it-administrator-m-w-d-228415d32e01</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10443,7 +10251,7 @@
   <url>
     <loc>https://app.instaffo.com/job/produktmanager-m-w-d-fahrzeuguberfuhrung-und-remarketing-9e0530a834fb</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-27</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10467,7 +10275,7 @@
   <url>
     <loc>https://app.instaffo.com/job/sales-relationship-manager-m-w-d-850c6fb7615d</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-20</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10558,6 +10366,12 @@
     <loc>https://app.instaffo.com/job/cloud-engineer-azure-ba72178754b3</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-18</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/product-manager-it-f-m-d-4483b0aafccb</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10653,7 +10467,7 @@
   <url>
     <loc>https://app.instaffo.com/job/it-systemadministrator-m-w-d-in-osnabruck-3ac1870bcd6e</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-19</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10666,12 +10480,6 @@
     <loc>https://app.instaffo.com/job/ux-designer-m-w-d-81ca29347892</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-20</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.instaffo.com/job/data-scientist-data-analyst-d1ed39f39832</loc>
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -10828,6 +10636,12 @@
     <loc>https://app.instaffo.com/job/bilanzbuchhalter-steuerfachwirte-diplom-finanzwirte-m-w-d-2d8583ad7e4b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/sales-manager-b2b-m-w-d-d96c5886a27f</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11005,6 +10819,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/it-application-manager-m-w-d-34bdbdab27a8</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/manager-operations-hardware-produktion-m-w-d-18a82ff4c92b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-25</lastmod>
@@ -11115,7 +10935,7 @@
   <url>
     <loc>https://app.instaffo.com/job/head-of-it-m-w-d-61cb64fdadb9</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-25</lastmod>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11167,6 +10987,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/fullstack-developer-m-w-d-5d824f64cce4</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/seo-geo-manager-m-w-d-3a539e3ef245</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-26</lastmod>
@@ -11181,7 +11007,13 @@
   <url>
     <loc>https://app.instaffo.com/job/teamlead-operations-shu-m-w-d-e71950789666</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/data-engineer-06d5f0248738</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11217,19 +11049,19 @@
   <url>
     <loc>https://app.instaffo.com/job/bilanzbuchhalter-m-w-d-f809f504c5c6</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
+    <lastmod>2025-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/ki-softwareentwickler-m-w-d-revolutioniere-mit-uns-die-bau-und-architekturbranche-493c2628711c</loc>
+    <loc>https://app.instaffo.com/job/finanzbuchhalter-w-m-d-1052afbcbe2e</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-27</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://app.instaffo.com/job/aws-cloud-architect-m-w-d-52483aeee829</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-02-26</lastmod>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11239,9 +11071,21 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.instaffo.com/job/key-account-managerin-3848761c455f</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.instaffo.com/job/senior-software-entwickler-python-m-w-d-fur-unsere-regulatorische-plattform-82b6b82e288b</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/technical-seo-manager-all-genders-855571cb660e</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11263,9 +11107,21 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://app.instaffo.com/job/fitness-content-creator-m-w-d-ade9ebecf35e</loc>
+    <loc>https://app.instaffo.com/job/senior-frontend-engineer-m-w-d-04575285583f</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/mirth-connect-account-manager-392534e4a7a5</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/fitness-content-creator-m-w-d-ade9ebecf35e</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11290,6 +11146,186 @@
     <loc>https://app.instaffo.com/job/steuerexperte-steuerberater-fur-digitale-anwendungen-m-w-d-33abaa22bef8</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/senior-software-developer-m-w-d-b60c0a3fbbbe</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/softwaretester-testautomatisierer-m-w-d-6c07341352cf</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/copy-senior-backend-cloud-engineer-m-w-d-3c0433405ba0</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/senior-full-stack-developer-54088744233e</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/hubspot-consultant-marketing-automation-specialist-m-w-d-b4c897222727</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/solution-architect-m-w-d-9afb52c26f1f</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/lead-software-developer-m-w-d-15bb950a7481</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/customer-success-manager-m-w-d-f6f5d6f455a6</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/campaign-manager-m-w-d-e9160023070b</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/director-advertising-m-w-d-digital-media-93fe56e8178e</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/crm-manager-all-genders-9570bc0ed007</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/senior-backend-developer-all-genders-19c98a2d8e84</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/ai-software-engineer-69c43c0f7db2</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/cloud-security-compliance-engineer-m-w-d-3d831aa2a783</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/projekt-manager-digitalisierungsprojekte-m-w-d-79d2b4d33825</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/accountant-buchhalter-all-genders-eafb5aae5db3</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/customer-success-manager-e-commerce-m-w-d-3427eb2dc2b3</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/bilanzbuchhalter-all-genders-in-voll-und-teilzeit-a0a311b86986</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/project-manager-e-commerce-m-w-d-46a2cb1757a8</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-02-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/customer-support-manager-megacad-gmbh-64c39926420e</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/product-owner-crm-m-w-d-71cd7fa91907</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/it-governance-and-compliance-manager-m-w-d-efd86d08d2d2</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/senior-qa-engineer-m-w-d-5b521144d9d4</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/senior-plm-application-manager-m-w-d-1e715b7a89df</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/mirth-connect-project-manager-66eb4b96b528</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/enterprise-sdr-bdr-81e9944dfa52</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/mirth-connect-specialist-junior-senior-e11b0c04b31b</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/technical-product-owner-f-m-d-programmatic-d80b8a02ebd5</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/growth-lead-4c3f87d1b336</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.instaffo.com/job/teamleiter-all-genders-network-architecture-5e7561f99bfe</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-03</lastmod>
     <priority>1.0</priority>
   </url>
 </urlset>
