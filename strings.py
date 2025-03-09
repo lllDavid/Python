@@ -27,3 +27,10 @@ print(text.isspace())  # Output: True
 
 text = "hello"
 print(text.isspace())  # Output: False
+
+s = "apple:banana:cherry"
+before, sep, after = s.partition(':')
+print(before, sep, after)  # "apple :banana:cherry"
+
+s = "Hello\tWorld"
+print(s.expandtabs(4))  # "Hello   World"
