@@ -1,8 +1,10 @@
 # dict
 person = {"name": "Alice", "age": 30, "city": "New York"}
 
-{name, city} = {**person}  
+name, city = person["name"], person["city"]
+
 print(f"name={name}, city={city}")
+
 
 # merge
 dict1 = {"a": 1, "b": 2}
