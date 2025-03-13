@@ -24,3 +24,19 @@ def reverse_bits(n):
     return result
 
 print(bin(reverse_bits(0b00000000000000000000000000001011)))
+
+a = 5   # 0b0101
+b = 3   # 0b0011
+
+print(a & b)  
+
+print(a | b)  
+
+print(a ^ b)  
+
+print(~a)    
+
+print(a << 1)
+
+print(a >> 1) 
+
