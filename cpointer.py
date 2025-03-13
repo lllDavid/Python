@@ -16,5 +16,5 @@ print(f"After modification: ({points_array[0].x}, {points_array[0].y})")
 ptr = ctypes.cast(points_array, ctypes.POINTER(Point))  
 
 for i in range(num_points):
-    point = ptr[i]  # Access element at index i
+    point = ptr[i]  
     print(f"Point {i}: ({point.x}, {point.y})")
