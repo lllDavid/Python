@@ -8,7 +8,6 @@ class LinkedList:
         self.head = None
     
     def append(self, value):
-        """Insert a new node at the end of the list."""
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -19,13 +18,11 @@ class LinkedList:
         last_node.next = new_node
 
     def prepend(self, value):
-        """Insert a new node at the beginning of the list."""
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
 
     def delete_with_value(self, value):
-        """Delete the first node with the given value."""
         if not self.head:
             return
         
@@ -41,7 +38,6 @@ class LinkedList:
             current_node = current_node.next
 
     def print_list(self):
-        """Print the linked list."""
         current_node = self.head
         while current_node:
             print(current_node.value, end=" -> ")

@@ -19,7 +19,6 @@ class Graph:
         for vertex in self.graph:
             print(f"{vertex}: {self.graph[vertex]}")
 
-# Example usage
 g = Graph()
 g.add_vertex(1)
 g.add_vertex(2)

@@ -45,7 +45,6 @@ def areAlmostEqual3(s1: str, s2: str) -> bool:
 
     return False
 
-
 print(areAlmostEqual("bank","bazk"))
 print(areAlmostEqual2("bank","kanb"))
 print(areAlmostEqual3("bank","kand"))

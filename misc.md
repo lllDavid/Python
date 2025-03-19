@@ -19,9 +19,6 @@ Built-in decorators (@staticmethod, @classmethod, @property)
 
 Creating custom context managers (__enter__, __exit__)
 
-SQL basics (using sqlite3 module)
-Connecting to external databases (using libraries like SQLAlchemy, PyMySQL)
-
 asyncio library
 Coroutines, event loops
 
@@ -37,3 +34,4 @@ Matplotlib/Seaborn (for data visualization)
 Advanced logging (using logging module)
 Type hints and static type checking (using mypy)
 
+Dis, AST

@@ -18,4 +18,4 @@ def backup_files(src_dir, dest_dir):
     except Exception as e:
         print(f"Error during backup: {e}")
 
-backup_files('/path/to/source/folder', '/path/to/backup/folder')
+backup_files('source/folder', 'backup/folder')
