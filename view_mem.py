@@ -1,14 +1,31 @@
-# Create a byte object
-data = bytearray(b"Hello, world!")
+import psutil
+import time
 
-# Create a memoryview of the bytearray
-mv = memoryview(data)
+def view_memory():
+    memory = psutil.virtual_memory()
+    swap = psutil.swap_memory()
 
-# Access the memoryview like a regular array
-print(mv[0])  # Prints: 72 (ASCII value of 'H')
-print(mv[1])  # Prints: 101 (ASCII value of 'e')
+    print(f"--- System Memory ---")
+    print(f"Total memory: {memory.total / (1024 ** 3):.2f} GB")
+    print(f"Available memory: {memory.available / (1024 ** 3):.2f} GB")
+    print(f"Used memory: {memory.used / (1024 ** 3):.2f} GB")
+    print(f"Memory usage: {memory.percent}%")
+    
+    print(f"\n--- Swap Memory ---")
+    print(f"Total swap: {swap.total / (1024 ** 3):.2f} GB")
+    print(f"Used swap: {swap.used / (1024 ** 3):.2f} GB")
+    print(f"Free swap: {swap.free / (1024 ** 3):.2f} GB")
+    print(f"Swap usage: {swap.percent}%")
 
-# Modify the data through the memoryview (it modifies the original data)
-mv[0] = 74  # Change 'H' to 'J'
+def real_time_monitoring(interval=5, duration=30):
+    print(f"Starting real-time memory monitoring for {duration} seconds...\n")
+    start_time = time.time()
 
-print(data)  # Prints: bytearray(b"Jello, world!")
+    while time.time() - start_time < duration:
+        view_memory()
+        print("-" * 40)
+        time.sleep(interval)
+
+if __name__ == "__main__":
+    real_time_monitoring()
+    
