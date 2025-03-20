@@ -1,17 +1,20 @@
 from collections import deque
 
 def bfs(graph, start):
-    visited = set()
+    visited = set()  
     queue = deque([start])
-    
+    visited.add(start)  
+
     while queue:
         node = queue.popleft()
-        if node not in visited:
-            print(node, end=' ')  
-            visited.add(node)
-            queue.extend(graph[node] - visited)  
+        print(node, end=' ')  
 
-graph = {
+        for neighbor in graph[node]:  
+            if neighbor not in visited:
+                queue.append(neighbor)
+                visited.add(neighbor)  
+
+graph1 = {  
     'A': {'B', 'C'},
     'B': {'A', 'D', 'E'},
     'C': {'A', 'F', 'G'},
@@ -22,4 +25,17 @@ graph = {
     'H': {'E'}
 }
 
-bfs(graph, 'A')
+graph2 = {  
+    '5': ['3', '7'],
+    '3': ['2', '4'],
+    '7': ['8'],
+    '2': [],
+    '4': ['8'],
+    '8': []
+}
+
+print("BFS on graph1 (Set-based):")
+bfs(graph1, 'A')
+
+print("\nBFS on graph2 (List-based):")
+bfs(graph2, '5')

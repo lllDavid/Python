@@ -9,3 +9,12 @@ def binary_search(arr, target):
         else:
             high = mid - 1
     return -1  
+
+def binary_search(arr, target, low=0, high=None):
+    if high is None:
+        high = len(arr) - 1
+    if low > high:
+        return -1
+    mid = (low + high) // 2
+    return mid if arr[mid] == target else binary_search(arr, target, mid + 1, high) if arr[mid] < target else binary_search(arr, target, low, mid - 1)
+
