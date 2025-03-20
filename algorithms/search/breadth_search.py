@@ -34,8 +34,8 @@ graph2 = {
     '8': []
 }
 
-print("BFS on graph1 (Set-based):")
+print("graph1:")
 bfs(graph1, 'A')
 
-print("\nBFS on graph2 (List-based):")
+print("\ngraph2:")
 bfs(graph2, '5')
