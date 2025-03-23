@@ -31,7 +31,7 @@ class User2:
         age = 2025-birthyear
         return cls(username, age, email, password, birthyear)
 
-user = User2.greet("David","david@web.de",123456,1997)
+user = User2.greet("David","david@gmail.com",123456,1999)
 print(user)
 
 
