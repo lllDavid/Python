@@ -1,79 +1,59 @@
-import psutil
 import time
-import logging
-import os
 
-log_file = "sys_stats.log"
-if os.path.exists(log_file):
-    os.remove(log_file)
+def get_cpu_stats():
+    with open('/proc/stat', 'r') as file:
+        stats = file.readlines()
 
-logging.basicConfig(filename=log_file, level=logging.INFO)
+    cpu_stats = {}
+    for line in stats:
+        if line.startswith('cpu '):
+            cpu_info = line.split()
+            cpu_stats['user'] = int(cpu_info[1])
+            cpu_stats['nice'] = int(cpu_info[2])
+            cpu_stats['system'] = int(cpu_info[3])
+            cpu_stats['idle'] = int(cpu_info[4])
+            cpu_stats['iowait'] = int(cpu_info[5])
+            cpu_stats['irq'] = int(cpu_info[6])
+            cpu_stats['softirq'] = int(cpu_info[7])
+            cpu_stats['steal'] = int(cpu_info[8])
+            cpu_stats['guest'] = int(cpu_info[9])
+            cpu_stats['guest_nice'] = int(cpu_info[10])
+    return cpu_stats
 
-def log():
-    logging.info(f"CPU Usage: {psutil.cpu_percent()}%")
-    logging.info(f"Memory Usage: {psutil.virtual_memory().percent}%")
-    logging.info(f"Swap Memory Usage: {psutil.swap_memory().percent}%")
+def get_system_uptime():
+    with open('/proc/uptime', 'r') as file:
+        uptime = file.readline().split()
+    return float(uptime[0])
+
+def calculate_cpu_usage(prev_cpu_stats, curr_cpu_stats):
+    prev_total = sum(prev_cpu_stats.values())
+    curr_total = sum(curr_cpu_stats.values())
+
+    prev_idle = prev_cpu_stats['idle'] + prev_cpu_stats['iowait']
+    curr_idle = curr_cpu_stats['idle'] + curr_cpu_stats['iowait']
+
+    total_diff = curr_total - prev_total
+    idle_diff = curr_idle - prev_idle
+
+    if total_diff == 0:
+        return 0.0
+
+    cpu_usage = 100.0 * (1.0 - (idle_diff / total_diff))
+    return cpu_usage
+
+def display_stats():
+    prev_cpu_stats = get_cpu_stats()
+    prev_uptime = get_system_uptime()
+
+    time.sleep(1)
+
+    curr_cpu_stats = get_cpu_stats()
+    curr_uptime = get_system_uptime()
+
+    cpu_usage = calculate_cpu_usage(prev_cpu_stats, curr_cpu_stats)
     
-    uptime = time.time() - psutil.boot_time()
-    logging.info(f"System Uptime: {time.strftime('%H:%M:%S', time.gmtime(uptime))}")
+    print(f"CPU Usage: {cpu_usage:.2f}%")
+    print(f"System Uptime: {curr_uptime - prev_uptime:.2f} seconds")
 
-    partitions = psutil.disk_partitions()
-    for partition in partitions:
-        try:
-            disk_usage = psutil.disk_usage(partition.mountpoint)
-            logging.info(f"Disk Usage ({partition.device}): {disk_usage.percent}%")
-        except PermissionError:
-            continue
-
-    net_io = psutil.net_io_counters()
-    logging.info(f"Bytes Sent: {net_io.bytes_sent / (1024 ** 2):.2f} MB")
-    logging.info(f"Bytes Received: {net_io.bytes_recv / (1024 ** 2):.2f} MB")
-    
-    try:
-        cpu_temp = psutil.sensors_temperatures()
-        if 'coretemp' in cpu_temp:
-            for entry in cpu_temp['coretemp']:
-                logging.info(f"CPU Temperature ({entry.label}): {entry.current}°C")
-    except AttributeError:
-        logging.info("CPU Temperature: Not Supported")
-
-def display():
-    while True:
-        try:
-            print(f"CPU Usage: {psutil.cpu_percent()}%")
-            print(f"Memory Usage: {psutil.virtual_memory().percent}%")
-            print(f"Swap Memory Usage: {psutil.swap_memory().percent}%")
-            
-            uptime = time.time() - psutil.boot_time()
-            print(f"System Uptime: {time.strftime('%H:%M:%S', time.gmtime(uptime))}")
-            
-            partitions = psutil.disk_partitions()
-            for partition in partitions:
-                try:
-                    disk_usage = psutil.disk_usage(partition.mountpoint)
-                    print(f"Disk Usage ({partition.device}): {disk_usage.percent}%")
-                except PermissionError:
-                    continue
-
-            net_io = psutil.net_io_counters()
-            print(f"Bytes Sent: {net_io.bytes_sent / (1024 ** 2):.2f} MB")
-            print(f"Bytes Received: {net_io.bytes_recv / (1024 ** 2):.2f} MB")
-
-            try:
-                cpu_temp = psutil.sensors_temperatures()
-                if 'coretemp' in cpu_temp:
-                    for entry in cpu_temp['coretemp']:
-                        print(f"CPU Temperature ({entry.label}): {entry.current}°C")
-            except AttributeError:
-                print("CPU Temperature: Not Supported")
-
-            print("\n" + "-"*50 + "\n")
-
-            log()
-
-            time.sleep(2)
-        except KeyboardInterrupt:
-            print("Monitoring stopped by user.")
-            break
-
-display()
+if __name__ == "__main__":
+    display_stats()
