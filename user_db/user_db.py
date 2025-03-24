@@ -1,35 +1,58 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import List, Dict
 
 @dataclass
 class UserDB:
-    users_list:list = [] 
-    users_dict:dict = {}
+    users_list: List[dict] = field(default_factory=list)
+    users_dict: Dict[int, dict] = field(default_factory=dict)
 
-class User:
-    def __init__(self, username, email, password):
-        self.username = username 
-        self.email = email
-        self.password = password
+    def add_user(self, user_id: int, user_name: str):
+        """Add a user to both users_list and users_dict."""
+        user = {"id": user_id, "name": user_name}
+        self.users_list.append(user)
+        self.users_dict[user_id] = user
+        print(f"User '{user_name}' added.")
 
-    def __str__(self):
-        return f"Username: {self.username}, Email: {self.email}, Password: {self.password}"
-    
+    def remove_user(self, user_id: int):
+        """Remove a user from both users_list and users_dict by user ID."""
+        if user_id in self.users_dict:
+            user = self.users_dict.pop(user_id)
+            self.users_list = [u for u in self.users_list if u["id"] != user_id]
+            print(f"User '{user['name']}' removed.")
+        else:
+            print("User not found!")
 
-user1 = User("David_X","david@company.com","12345678")
+    def get_user(self, user_id: int):
+        """Retrieve a user by ID from users_dict."""
+        user = self.users_dict.get(user_id)
+        if user:
+            return user
+        else:
+            return "User not found!"
 
-user2 = User("David_Y","david@company.com","12345678")
-
-user3 = User("David_Z","david@company.com","12345678")
+    def list_users(self):
+        """List all users."""
+        if not self.users_list:
+            print("No users available.")
+        for user in self.users_list:
+            print(f"ID: {user['id']}, Name: {user['name']}")
 
 user_db = UserDB()
 
-user_db.users_list.append(user1)
-user_db.users_list.append(user2)
-user_db.users_list.append(user3)
+user_db.add_user(1, "David")
+user_db.add_user(2, "Tom")
+user_db.add_user(3, "Alice")
 
-user_db.users_dict["User:"] = user1
-user_db.users_dict["User:"] = user2
-user_db.users_dict["User:"] = user3
+print("\nList of users:")
+user_db.list_users()
 
-print(f"Users in list: {user_db.users_list}")
-print(f"Users in dict: {user_db.users_dict}")
+print("\nGetting user with ID 2:")
+print(user_db.get_user(2))
+
+user_db.remove_user(2)
+
+print("\nList of users after removal:")
+user_db.list_users()
+
+print("\nGetting removed user with ID 2:")
+print(user_db.get_user(2))
