@@ -7,9 +7,13 @@ def get_cpu_usage():
     total_cpu = [int(x) for x in lines[0].split()[2:6]]
     cpu_usage.extend(total_cpu)
 
-    for i in range(6):
-        line = lines[i + 1].split()
-        cpu_usage.extend([int(line[1]), int(line[3]), int(line[4])])
+    for i in range(1, len(lines)):
+        line = lines[i].split()
+        if len(line) >= 5 and line[0].startswith('cpu'):
+            cpu_usage.extend([int(line[1]), int(line[3]), int(line[4])])
+
+        if len(cpu_usage) >= 21:  
+            break
 
     return cpu_usage
 
@@ -26,8 +30,11 @@ def calculate_usage(cpu_usage):
         j = i * 3 + 3
         k = i * 3 + 4
         l = i * 3 + 5
-        core_usage = (100 * (cpu_usage[j] + cpu_usage[k])) // (cpu_usage[j] + cpu_usage[k] + cpu_usage[l])
-        print(f"Core {i} Load: {core_usage} %")
+        if j < len(cpu_usage) and k < len(cpu_usage) and l < len(cpu_usage):  
+            core_usage = (100 * (cpu_usage[j] + cpu_usage[k])) // (cpu_usage[j] + cpu_usage[k] + cpu_usage[l])
+            print(f"Core {i} Load: {core_usage} %")
+        else:
+            print(f"Core {i} Load: Data unavailable")
 
 if __name__ == "__main__":
     cpu_usage = get_cpu_usage()
