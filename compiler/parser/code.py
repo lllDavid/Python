@@ -26,3 +26,4 @@ if __name__ == "__main__":
     pairs = tk.display_number_operator_pairs()  
     parse_number(pairs)  
 
+# TODO: Tokenize into the correct operator / Not just Operator:
