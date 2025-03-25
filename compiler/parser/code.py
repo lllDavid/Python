@@ -12,16 +12,15 @@ def parse_number(pairs: list):
     print(digits)
     return digits
 
-
+# *, /, %
 def parse_term():
      pass
-
+# +, -
 def parse_expression():
      pass
 
-
 if __name__ == "__main__":
-    code = "1.2 + 2 - 3 * 4.5 / 5"
+    code = "1.2 + 2 - 3 * -4.5 / 5"
     tk = Tokenizer(code)
     tk.tokenize()  
     pairs = tk.display_number_operator_pairs()  

@@ -10,10 +10,10 @@ class Tokenizer:
 
     def tokenize(self):
         self.tokens = [
-           ("Number", findall(r"\d+\.\d+|\d+", self.code)),
+           ("Number", findall(r"-?\d+\.\d+|-?\d+", self.code)),
             ("Operator", findall(r"[+\-*/%^=<>!&|]+", self.code))
         ]
-
+        # TODO: Dont match "-" if negative number
         self.numbers = self.tokens[0][1]  
         self.operators = self.tokens[1][1]  
 
