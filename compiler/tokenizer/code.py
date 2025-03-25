@@ -10,7 +10,7 @@ class Tokenizer:
 
     def tokenize(self):
         self.tokens = [
-            ("Number", findall(r"\d+", self.code)),
+           ("Number", findall(r"\d+\.\d+|\d+", self.code)),
             ("Operator", findall(r"[+\-*/%^=<>!&|]+", self.code))
         ]
 
@@ -27,10 +27,10 @@ class Tokenizer:
             print(f"Number: {num} \nOperator: {op}")
             pairs.append((num, op))
         return pairs  
-
+'''
 code = "1 + 2 - 3 * 4 / 5"
 tokenizer = Tokenizer(code)
 tokenizer.tokenize()  
-# tokenizer.display_tokens() 
-# tokenizer.display_number_operator_pairs() 
-
+tokenizer.display_tokens() 
+tokenizer.display_number_operator_pairs() 
+'''
