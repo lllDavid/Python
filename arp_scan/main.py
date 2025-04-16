@@ -1,51 +1,59 @@
 import socket
 import struct
-import os
-from ipaddress import ip_network
+import binascii
 
-def get_local_ip():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.settimeout(0)
+def create_raw_socket():
     try:
-        s.connect(('10.254.254.254', 1))
-        local_ip = s.getsockname()[0]
-    except Exception:
-        local_ip = '127.0.0.1'
-    finally:
-        s.close()
-    return local_ip
+        raw_socket = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(0x0806))
+        return raw_socket
+    except Exception as e:
+        print(f"Error creating raw socket: {e}")
+        exit(1)
 
-def create_arp_request(sender_ip, target_ip):
-    hardware_type = 1
-    protocol_type = 0x0800
-    hardware_size = 6
-    protocol_size = 4
-    op_code = 1
-    sender_mac = os.urandom(6)
-    sender_ip = socket.inet_aton(sender_ip)
-    target_ip = socket.inet_aton(target_ip)
-    arp_request = struct.pack(
-        "!HHBBH6s4s6s4s", 
-        hardware_type, protocol_type, hardware_size, protocol_size,
-        op_code, sender_mac, sender_ip, b'\x00\x00\x00\x00\x00\x00', target_ip
-    )
-    return arp_request
+def build_arp_request(target_ip, source_ip, interface):
+    destination_mac = b'\xff\xff\xff\xff\xff\xff'
+    source_mac = get_mac_address(interface)
+    eth_header = struct.pack('!6s6sH', destination_mac, source_mac, 0x0806)
+    arp_header = struct.pack('!HHBBH6s4s6s4s',
+                             1,
+                             0x0800,
+                             6,
+                             4,
+                             1,
+                             source_mac,
+                             socket.inet_aton(source_ip),
+                             b'\x00\x00\x00\x00\x00\x00',
+                             socket.inet_aton(target_ip)
+                             )
+    return eth_header + arp_header
 
-def send_arp_request(target_ip):
-    local_ip = get_local_ip()
-    raw_socket = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)
-    dest_mac = b'\xff\xff\xff\xff\xff\xff'
-    src_mac = os.urandom(6)
-    eth_header = struct.pack("!6s6sH", dest_mac, src_mac, 0x0806)
-    arp_request = create_arp_request(local_ip, target_ip)
-    raw_socket.send(eth_header + arp_request)
-    print(f"[*] ARP Request sent for {target_ip} from {local_ip}")
-    raw_socket.close()
+def get_mac_address(interface):
+    with open(f'/sys/class/net/{interface}/address', 'r') as f:
+        return binascii.unhexlify(f.read().replace(":", "")).decode("utf-8")
 
-def arp_scan(network):
-    for ip in ip_network(network, strict=False).hosts():
-        send_arp_request(str(ip))
+def arp_scan(target_ip, source_ip, interface='eth0'):
+    raw_socket = create_raw_socket()
+    arp_request_packet = build_arp_request(target_ip, source_ip, interface)
+    raw_socket.sendto(arp_request_packet, (interface, 0))
+    
+    while True:
+        packet = raw_socket.recv(65535)
+        eth_header = packet[:14]
+        eth_fields = struct.unpack('!6s6sH', eth_header)
+        ethertype = eth_fields[2]
+        
+        if ethertype == 0x0806:
+            arp_header = packet[14:42]
+            arp_fields = struct.unpack('!HHBBH6s4s6s4s', arp_header)
+            opcode = arp_fields[4]
+            
+            if opcode == 2:
+                target_mac = binascii.hexlify(arp_fields[5]).decode('utf-8')
+                target_ip = socket.inet_ntoa(arp_fields[7])
+                print(f"IP Address: {target_ip}\tMAC Address: {target_mac}")
+                break
 
-if __name__ == "__main__":
-    network = "192.168.1.0/24"
-    arp_scan(network)
+target_ip = "192.168.1.1"
+source_ip = "192.168.1.100"
+
+arp_scan(target_ip, source_ip)
