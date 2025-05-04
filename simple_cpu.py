@@ -2,7 +2,7 @@ class SimpleCPU:
     def __init__(self):
         self.registers = {"A": 0, "B": 0, "C": 0, "D": 0}  
         self.memory = [0] * 256  
-        self.pc = 0  # Program counter
+        self.pc = 0  
         self.running = True
 
     def load_program(self, program):
