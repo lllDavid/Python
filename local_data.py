@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from subprocess import run
 from uuid import getnode
+import re
 import os
 
 @dataclass
@@ -27,12 +28,14 @@ class LocalData:
                 height = user32.GetSystemMetrics(1)
                 self.screen_resolution = (width, height)
             case "posix":  # Unix Device ID
-                try:
                     with open("/sys/class/dmi/id/product_uuid", "r") as f:
                         self.device_id = f.read().strip()
-                except FileNotFoundError:
-                    self.device_id = None
-                self.screen_resolution = None  
+                 # Unix Screen Resolution
+                    output = run(["xrandr"], capture_output=True, text=True).stdout
+                    match = re.search(r'current\s+(\d+)\s+x\s+(\d+)', output)
+                    if match:
+                        width, height = int(match.group(1)), int(match.group(2))
+                        self.screen_resolution = (width, height)             
 
 ld = LocalData()
 ld.collect_info()
