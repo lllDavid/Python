@@ -3,7 +3,6 @@ import os
 import time
 
 def get_process_info():
-    """Retrieve information about all running processes."""
     process_info = []
     
     for proc in psutil.process_iter(['pid', 'name', 'status', 'memory_info', 'cpu_times']):
@@ -24,7 +23,6 @@ def get_process_info():
     return process_info
 
 def print_process_info(process_info):
-    """Print process information in a readable format."""
     print(f"{'PID':<10}{'Name':<30}{'Status':<15}{'RSS Memory':<15}{'VMS Memory':<15}{'CPU Time (User)':<20}{'CPU Time (System)'}")
     print("="*105)
     
@@ -32,7 +30,6 @@ def print_process_info(process_info):
         print(f"{proc['pid']:<10}{proc['name']:<30}{proc['status']:<15}{proc['memory_rss']:<15}{proc['memory_vms']:<15}{proc['cpu_user_time']:<20}{proc['cpu_system_time']}")
     
 def main():
-    """Main function to retrieve and display process information."""
     while True:
         print("Gathering process information...\n")
         process_info = get_process_info()

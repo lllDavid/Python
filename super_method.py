@@ -10,10 +10,9 @@ class Animal:
 
     def is_overweight(self):
         bmi = self.calculate_bmi()
-        return bmi > 30  # Example threshold for overweight
+        return bmi > 30  
 
     def life_expectancy(self):
-        # Placeholder logic: average life expectancy based on species
         life_expectancy_map = {
             'dog': 12,
             'cat': 15,

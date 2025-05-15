@@ -1,26 +1,22 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-# Base class for Human with more complex behavior
 @dataclass
 class Human:
     name: str
     age: int
     birthyear: int
-    height: float  # Height in feet
-    weight: float  # Weight in pounds
+    height: float
+    weight: float
     gender: Optional[str] = field(default="Not Specified")
     nationality: Optional[str] = field(default="Not Specified")
     occupation: Optional[str] = field(default="Unemployed")
     
-    # Method to calculate BMI (Body Mass Index)
     def calculate_bmi(self) -> float:
-        # BMI = weight (lbs) / height (inches)^2 * 703
         height_in_inches = self.height * 12
         bmi = (self.weight / (height_in_inches ** 2)) * 703
         return round(bmi, 2)
 
-    # Method to categorize the BMI
     def bmi_category(self) -> str:
         bmi = self.calculate_bmi()
         if bmi < 18.5:
@@ -38,17 +34,14 @@ class Human:
         age = current_year - birthyear
         return cls(name, age, birthyear, height, weight, gender, nationality, occupation)
 
-    # Method to update the human's weight
     def update_weight(self, new_weight: float):
         print(f"Updating {self.name}'s weight from {self.weight} lbs to {new_weight} lbs.")
         self.weight = new_weight
 
-    # Method to update the human's height
     def update_height(self, new_height: float):
         print(f"Updating {self.name}'s height from {self.height} ft to {new_height} ft.")
         self.height = new_height
 
-    # Method to display a summary of the human's data
     def display_info(self):
         bmi = self.calculate_bmi()
         print(f"Name: {self.name}")
@@ -62,8 +55,6 @@ class Human:
         print(f"BMI: {bmi}")
         print(f"BMI Category: {self.bmi_category()}")
 
-
-# Child class: Employee (inherits from Human and adds more attributes related to employment)
 @dataclass
 class Employee(Human):
     employee_id: str
@@ -80,13 +71,11 @@ class Employee(Human):
         self.department = new_department
 
     def display_employee_info(self):
-        self.display_info()  # From the Human class
+        self.display_info()
         print(f"Employee ID: {self.employee_id}")
         print(f"Department: {self.department}")
         print(f"Salary: ${self.salary:.2f}")
 
-
-# Child class: Student (inherits from Human and adds more attributes related to studies)
 @dataclass
 class Student(Human):
     student_id: str
@@ -101,24 +90,20 @@ class Student(Human):
         self.gpa = new_gpa
 
     def display_student_info(self):
-        self.display_info()  # From the Human class
+        self.display_info()
         print(f"Student ID: {self.student_id}")
         print(f"Major: {self.major}")
         print(f"GPA: {self.gpa}")
 
-
-# Creating a Human object using the from_birthyear class method
 alice = Human.from_birthyear(name="Alice", birthyear=1990, height=5.7, weight=140, gender="Female", nationality="American", occupation="Engineer")
 alice.display_info()
 print()
 
-# Updating Alice's weight and height
 alice.update_weight(150)
 alice.update_height(5.8)
 alice.display_info()
 print()
 
-# Creating an Employee object
 emp = Employee.from_birthyear(name="Bob", birthyear=1985, height=6.0, weight=180, gender="Male", nationality="Canadian", occupation="Manager", employee_id="E1234", department="Sales", salary=75000)
 emp.display_employee_info()
 emp.give_raise(5)
@@ -126,7 +111,6 @@ emp.change_department("Marketing")
 emp.display_employee_info()
 print()
 
-# Creating a Student object
 stu = Student.from_birthyear(name="Charlie", birthyear=2000, height=5.9, weight=160, gender="Male", nationality="British", occupation="Student", student_id="S5678", major="Computer Science", gpa=3.8)
 stu.display_student_info()
 stu.study(4)

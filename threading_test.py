@@ -8,16 +8,15 @@ shared_data = []
 
 def print_numbers():
     for i in range(5):
-        time.sleep(random.uniform(0.5, 1.5))  # Simulating variable time taken to print
-        with lock:  # Synchronizing access to shared data
+        time.sleep(random.uniform(0.5, 1.5))  
+        with lock:  
             shared_data.append(f"Number: {i}")
             print(f"Number Thread: {i}")
 
-# Another function that also does some computational work.
 def print_letters():
     for letter in ['A', 'B', 'C', 'D', 'E']:
-        time.sleep(random.uniform(1, 2))  # Simulating variable time taken to print
-        with lock:  # Synchronizing access to shared data
+        time.sleep(random.uniform(1, 2))  
+        with lock:  
             shared_data.append(f"Letter: {letter}")
             print(f"Letter Thread: {letter}")
 

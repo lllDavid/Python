@@ -2,51 +2,41 @@ import math
 
 class Vector:
     def __init__(self, x, y, z):
-        """Initialize a 3D vector with components x, y, z."""
         self.x = x
         self.y = y
         self.z = z
 
     def __repr__(self):
-        """Represent the vector as a string."""
         return f"Vector({self.x}, {self.y}, {self.z})"
 
     def add(self, other):
-        """Add two vectors."""
         return Vector(self.x + other.x, self.y + other.y, self.z + other.z)
 
     def subtract(self, other):
-        """Subtract two vectors."""
         return Vector(self.x - other.x, self.y - other.y, self.z - other.z)
 
     def dot(self, other):
-        """Calculate the dot product of two vectors."""
         return self.x * other.x + self.y * other.y + self.z * other.z
     
     def cross(self, other):
-        """Calculate the cross product of two vectors."""
         cx = self.y * other.z - self.z * other.y
         cy = self.z * other.x - self.x * other.z
         cz = self.x * other.y - self.y * other.x
         return Vector(cx, cy, cz)
 
     def magnitude(self):
-        """Calculate the magnitude (length) of the vector."""
         return math.sqrt(self.x**2 + self.y**2 + self.z**2)
 
     def normalize(self):
-        """Normalize the vector (make its magnitude 1)."""
         mag = self.magnitude()
         if mag == 0:
             raise ValueError("Cannot normalize a zero-length vector")
         return Vector(self.x / mag, self.y / mag, self.z / mag)
 
     def scale(self, scalar):
-        """Scale the vector by a scalar."""
         return Vector(self.x * scalar, self.y * scalar, self.z * scalar)
 
     def angle_between(self, other):
-        """Calculate the angle between two vectors in radians."""
         dot_prod = self.dot(other)
         mag_self = self.magnitude()
         mag_other = other.magnitude()

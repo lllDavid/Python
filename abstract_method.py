@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-# Abstract Base Class for Animal Behavior
 class Animal(ABC):
     def __init__(self, name, age, species):
         self.name = name
@@ -26,7 +25,6 @@ class Animal(ABC):
     def display_info(self):
         print(f"{self.species} Info: Name: {self.name}, Age: {self.age}")
 
-# Interface for Worker Actions (Non-Abstract Methods)
 class WorkerActions:
     def __init__(self, job_title):
         self.job_title = job_title
@@ -37,7 +35,6 @@ class WorkerActions:
     def take_break(self):
         print(f"{self.job_title} is taking a break.")
 
-# Derived Class: Human (inherits from Animal and WorkerActions)
 class Human(Animal, WorkerActions):
     def __init__(self, name, age, species, job_title, gender):
         Animal.__init__(self, name, age, species)
@@ -56,7 +53,6 @@ class Human(Animal, WorkerActions):
     def eat(self, food):
         print(f"{self.name} is eating {food}")
 
-# Derived Class: Athlete (inherits from Human)
 class Athlete(Human):
     def __init__(self, name, age, species, job_title, gender, sport):
         super().__init__(name, age, species, job_title, gender)
@@ -71,7 +67,6 @@ class Athlete(Human):
     def train(self):
         print(f"{self.name} is training hard for {self.sport}")
 
-# Derived Class: Student (inherits from Human)
 class Student(Human):
     def __init__(self, name, age, species, job_title, gender, school):
         super().__init__(name, age, species, job_title, gender)
@@ -86,7 +81,6 @@ class Student(Human):
     def study(self):
         print(f"{self.name} is studying for exams at {self.school}")
 
-# Derived Class: Robot (inherits from Animal and WorkerActions)
 class Robot(Animal, WorkerActions):
     def __init__(self, name, age, species, job_title, model):
         Animal.__init__(self, name, age, species)
@@ -108,7 +102,6 @@ class Robot(Animal, WorkerActions):
     def repair(self):
         print(f"{self.name} is being repaired.")
 
-# Using Composition to enhance classes
 class Car:
     def __init__(self, brand, model):
         self.brand = brand
@@ -125,7 +118,6 @@ class HumanWithCar(Human):
     def drive_car(self):
         self.car.drive()
 
-# Instantiate objects
 p1 = Human("David", 30, "Human", "Engineer", "Male")
 p1.speak()
 p1.move()
@@ -151,7 +143,6 @@ robot.sleep(0)
 robot.eat("Electricity")
 robot.repair()
 
-# Using Composition with Human and Car
 car = Car("Tesla", "Model S")
 human_with_car = HumanWithCar("Mark", 28, "Human", "Driver", "Male", car)
 human_with_car.speak()

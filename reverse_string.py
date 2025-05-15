@@ -6,4 +6,12 @@ def reverse(s):
         length = length - 1
     return s1
 
-print(reverse("Hallo"))
+print(reverse("hello"))
+
+s = "hello"
+reversed_s = s[::-1]
+print(reversed_s)  
+
+s = "hello"
+reversed_s = ''.join(reversed(s))
+print(reversed_s)  
