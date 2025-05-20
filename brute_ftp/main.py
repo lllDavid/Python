@@ -47,7 +47,7 @@ def brute_ftp(target, port, username_list, password_list):
     print(f"\nUsernames: {len(username_list)} | Passwords: {len(password_list)}")
 
     try:
-        with ThreadPoolExecutor(max_workers=100) as executor:
+        with ThreadPoolExecutor(max_workers=10) as executor:
             futures = []
             for username in username_list:
                 for password in password_list:

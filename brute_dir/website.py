@@ -1,6 +1,5 @@
 from flask import Flask, request
 import logging
-from datetime import datetime
 
 app = Flask(__name__)
 

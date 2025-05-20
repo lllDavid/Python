@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
+app.secret_key = 'secret_key' 
 
 users = {
-    'admin': 'admin123',  
-    'user': 'user123',
-    'service': 'service123'
+    'admin': 'admin',  
+    'user': 'user',
+    'service': 'service',
+    'support': 'support'
 }
 
 @app.route('/')
