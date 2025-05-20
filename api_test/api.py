@@ -4,7 +4,10 @@ app = Flask(__name__)
 
 posts = [
     {'id': 1, 'title': 'First Post', 'body': 'This is the first post.'},
-    {'id': 2, 'title': 'Second Post', 'body': 'This is the second post.'}
+    {'id': 2, 'title': 'Second Post', 'body': 'This is the second post.'},
+    {'id': 3, 'title': 'Third Post', 'body': 'This is the third post.'},
+    {'id': 4, 'title': 'Fourth Post', 'body': 'This is the fourth post.'},
+    {'id': 5, 'title': 'Fifth Post', 'body': 'This is the fifth post.'}
 ]
 
 @app.route('/posts', methods=['POST'])
@@ -36,8 +39,7 @@ def update_post(post_id):
 
 @app.route('/posts/<int:post_id>', methods=['DELETE'])
 def delete_post(post_id):
-    global posts
-    posts = [post for post in posts if post['id'] != post_id]
+    posts[:] = [post for post in posts if post['id'] != post_id]
     return jsonify({'message': f'Post with ID {post_id} deleted'}), 200
 
 if __name__ == '__main__':
