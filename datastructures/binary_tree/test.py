@@ -49,3 +49,4 @@ node.insert_value(89)
 node.inorder_traversal()
 
 print(node.find_value(22))
+print(node.find_value(999))

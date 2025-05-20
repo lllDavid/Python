@@ -18,3 +18,23 @@ class Stack:
     
     def size(self):
         return len(self.items)
+
+stack = Stack()
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+print(stack.size())
+
+print(stack.peek())
+
+print(stack.pop())
+print(stack.pop())
+
+print(stack.size())
+
+print(stack.is_empty())
+
+print(stack.pop())
+print(stack.is_empty())

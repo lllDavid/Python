@@ -14,3 +14,21 @@ class Queue:
     
     def size(self):
         return len(self.items)
+
+q = Queue()
+
+q.enqueue('a')
+q.enqueue('b')
+q.enqueue('c')
+
+print(q.size())  
+
+print(q.dequeue())  
+print(q.dequeue())  
+
+print(q.size())  
+
+print(q.is_empty())  
+
+print(q.dequeue())  
+print(q.is_empty())  

@@ -1,23 +1,22 @@
-# Creating a bytearray from a list of integers
 byte_arr = bytearray([65, 66, 67, 68, 69])
-print("Bytearray:", byte_arr)
 
-# Modifying a byte in the array
-byte_arr[0] = 97  
-print("Modified Bytearray:", byte_arr)
+byte_arr.extend([70, 71, 72])
+print("After extend:", byte_arr)
 
-# Converting bytearray to string
-string_rep = byte_arr.decode('utf-8')
-print("String Representation:", string_rep)
+byte_arr.insert(0, 64)
+print("After insert:", byte_arr)
 
-# Creating a bytearray from a string
-byte_arr2 = bytearray("Hello", 'utf-8')
-print("Bytearray from string:", byte_arr2)
+byte_arr.remove(66)
+print("After remove 66:", byte_arr)
 
-# Appending a byte to the bytearray
-byte_arr2.append(33)  
-print("Appended Bytearray:", byte_arr2)
+popped = byte_arr.pop(2)
+print("Popped byte:", popped)
+print("After pop:", byte_arr)
 
-# Converting back to bytes
-bytes_obj = bytes(byte_arr2)
-print("Bytes object:", bytes_obj)
+slice_part = byte_arr[1:4]
+print("Sliced part:", slice_part)
+
+byte_arr.clear()
+print("After clear:", byte_arr)
+
+print("Length:", len(byte_arr))

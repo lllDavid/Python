@@ -27,3 +27,19 @@ class HashMap:
             if kv[0] == key:
                 del self.table[index][idx]
                 return
+
+hmap = HashMap()
+
+hmap.insert("apple", 10)
+hmap.insert("banana", 20)
+hmap.insert("orange", 30)
+
+print(hmap.get("apple"))    
+print(hmap.get("banana"))  
+print(hmap.get("grape"))    
+
+hmap.remove("banana")
+print(hmap.get("banana"))   
+
+hmap.insert("apple", 15)  
+print(hmap.get("apple"))    

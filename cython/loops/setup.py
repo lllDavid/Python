@@ -5,5 +5,4 @@ setup(
     ext_modules=cythonize("cyt_func.pyx")
 )
 
-
 # python setup.py build_ext --inplace
