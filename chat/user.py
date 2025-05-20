@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, DateTime
+from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 Base = declarative_base()
@@ -14,8 +14,13 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 def register_user(username):
+    existing_user = session.query(User).filter_by(username=username).first()
+    if existing_user:
+        raise ValueError(f"Username '{username}' is already taken.")
+    
     user = User(username=username)
     session.add(user)
     session.commit()
+
 
 
