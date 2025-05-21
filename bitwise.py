@@ -6,7 +6,6 @@ print(bin(a | b))
 print(bin(a ^ b)) 
 print(bin(~a))     
 
-#hw
 def count_set_bits(n):
     count = 0
     while n:
