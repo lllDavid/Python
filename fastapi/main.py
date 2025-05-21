@@ -5,7 +5,7 @@ from items import items
 app = FastAPI()
 
 class Shop(str, Enum):
-    shop = "amazon"
+    shop = "Shop"
 
 @app.get("/")
 async def root():
@@ -19,7 +19,7 @@ async def read_item(item_id: int):
 
 @app.get("/shops/{shop_name}")
 async def get_model(shop_name: Shop):
-    if shop_name is shop_name.shop:
-        return {"shop_name": shop_name, "message": "Succsess! Shop1!"}
+    if shop_name == Shop.shop:
+        return {"shop_name": shop_name, "message": "Success!"}
 
-
+# uvicorn main:app --reload

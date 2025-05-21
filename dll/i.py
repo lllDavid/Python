@@ -1,6 +1,6 @@
+import sys
 import ctypes
 from ctypes import wintypes
-import sys
 
 # NOTE: run like: python i.py <PID> <Path to dll>
 try:

@@ -11,7 +11,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 ### NOTE: Not working as intended yet
-### NOTE: German Retailers
 
 load_dotenv()
 
