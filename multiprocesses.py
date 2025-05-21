@@ -28,7 +28,7 @@ def transform_stage_2(data, lock, result_list):
 
 def error_handling_stage(data, lock, result_list):
     try:
-        if random.random() < 0.2:  # Simulate random errors
+        if random.random() < 0.2: 
             raise ValueError("Random error occurred during processing!")
         processed_data = [math.sqrt(x) for x in data if x > 0]
         with lock:
@@ -53,8 +53,8 @@ def process_data(data_chunk, lock, result_list):
     error_handling_stage(data_chunk, lock, result_list)
 
 def main():
-    data = generate_data(20)  # Generate 20 random numbers
-    chunk_size = len(data) // 4  # Split data into 4 chunks for parallel processing
+    data = generate_data(20)  
+    chunk_size = len(data) // 4 
 
     manager = Manager()
     result_list = manager.list()

@@ -18,7 +18,7 @@ hash_map['orange'] = 3
 
 print(hash_map['banana'])  
 
-print(len(hash_map))  # 3
+print(len(hash_map))  
 
 hash_map.pop('apple')
 

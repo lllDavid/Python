@@ -23,7 +23,6 @@ class Tokenizer:
         return tokens_with_pos
 
 def main():
-    # Sample text
     text = "Hello, world! How's it going? 123.45"
     
     tokenizer = Tokenizer()
