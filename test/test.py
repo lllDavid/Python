@@ -1,4 +1,16 @@
-text = "Hello abc hello 123 HELLO"
+lst = [1, 2, 2, 3, 4, 4, 5, 6, 6]
+
+def remove_duplicates(lst):
+    unique = []
+    for item in lst:
+        if item not in unique:
+            unique.append(item)
+    return unique
+
+print(remove_duplicates(lst))  
+
+
+text = "Hello abc hello 123 heLLo 223 xcb"
 
 def count_words(text):
     word_counts = {}
@@ -13,17 +25,6 @@ def count_words(text):
 
 print(count_words(text))
 
-
-lst = [1, 2, 2, 3, 4, 4, 5, 6, 6]
-
-def remove_duplicates(lst):
-    unique = []
-    for item in lst:
-        if item not in unique:
-            unique.append(item)
-    return unique
-
-print(remove_duplicates(lst))  
 
 def collatz(n):
     while n != 1:
