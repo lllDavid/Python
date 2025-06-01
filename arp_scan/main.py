@@ -13,7 +13,7 @@ def get_arp_table():
     return result.stdout.strip().split('\n')
 
 def arp_scan(network):
-    print(f"[+] Scanning network: {network}\n")
+    print(f"Scanning network: {network}\n")
 
     threads = []
     for ip in ipaddress.IPv4Network(network, strict=False):
@@ -36,7 +36,7 @@ def arp_scan(network):
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:
-        print("Usage: sudo python3 arp_scanner.py <CIDR>")
+        print("Usage: sudo python3 main.py <CIDR>")
         sys.exit(1)
 
     arp_scan(sys.argv[1])
