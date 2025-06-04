@@ -1,5 +1,3 @@
-arr = [64, 34, 25, 12, 22, 11, 90]
-
 def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2
@@ -30,4 +28,5 @@ def merge_sort(arr):
             k += 1
     return arr
 
+arr = [64, 34, 25, 12, 22, 11, 90]
 print(merge_sort(arr))
