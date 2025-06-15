@@ -20,4 +20,16 @@ square_with_numpy(data_numpy)
 numpy_time = time.time() - start_time
 
 print(f"Time list: {list_time:.5f} seconds")
-print(f"Time array: {numpy_time:.5f} seconds")
+print(f"Time Numpy array: {numpy_time:.5f} seconds""\n")
+
+
+import sys
+import array
+
+data_list = list(range(10**7))
+data_array = array.array('i', range(10**7))
+
+print(f"List size in bytes: {sys.getsizeof(data_list)}")
+print(f"Array size in bytes: {sys.getsizeof(data_array)}")
+
+
