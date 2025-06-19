@@ -1,3 +1,4 @@
+import hashlib
 from functools import wraps
 
 def log_function_call(func):
@@ -10,10 +11,13 @@ def log_function_call(func):
     return wrapper
 
 @log_function_call
-def add(a, b):
-    return a + b
+def compute_hash(data):
+    """Compute SHA-256 hash of the input string."""
+    h = hashlib.sha256()
+    h.update(data.encode('utf-8'))
+    return h.hexdigest()
 
-result = add(3, 5)
+result = compute_hash("hello world")
 
-print(f"Function name: {add.__name__}")
-print(f"Function docstring: {add.__doc__}")
+print(f"Function name: {compute_hash.__name__}")
+print(f"Function docstring: {compute_hash.__doc__}")
