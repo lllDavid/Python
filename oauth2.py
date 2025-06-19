@@ -1,5 +1,6 @@
 from os import getenv
 from dotenv import load_dotenv
+
 from requests_oauthlib import OAuth2Session
 from oauthlib.oauth2 import WebApplicationClient
 from flask import Flask, request, redirect

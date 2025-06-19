@@ -1,40 +1,38 @@
+import torch
 import math
 
 class Vector:
     def __init__(self, x, y, z):
-        self.x = x
-        self.y = y
-        self.z = z
+        self.v = torch.tensor([x, y, z], dtype=torch.float32)
 
     def __repr__(self):
-        return f"Vector({self.x}, {self.y}, {self.z})"
+        x, y, z = self.v.tolist()
+        return f"Vector({x}, {y}, {z})"
 
     def add(self, other):
-        return Vector(self.x + other.x, self.y + other.y, self.z + other.z)
+        return Vector(*(self.v + other.v))
 
     def subtract(self, other):
-        return Vector(self.x - other.x, self.y - other.y, self.z - other.z)
+        return Vector(*(self.v - other.v))
 
     def dot(self, other):
-        return self.x * other.x + self.y * other.y + self.z * other.z
-    
+        return torch.dot(self.v, other.v).item()
+
     def cross(self, other):
-        cx = self.y * other.z - self.z * other.y
-        cy = self.z * other.x - self.x * other.z
-        cz = self.x * other.y - self.y * other.x
-        return Vector(cx, cy, cz)
+        return Vector(*torch.linalg.cross(self.v, other.v))
 
     def magnitude(self):
-        return math.sqrt(self.x**2 + self.y**2 + self.z**2)
+        return torch.norm(self.v).item()
 
     def normalize(self):
         mag = self.magnitude()
         if mag == 0:
             raise ValueError("Cannot normalize a zero-length vector")
-        return Vector(self.x / mag, self.y / mag, self.z / mag)
+        normalized = self.v / mag
+        return Vector(*normalized)
 
     def scale(self, scalar):
-        return Vector(self.x * scalar, self.y * scalar, self.z * scalar)
+        return Vector(*(self.v * scalar))
 
     def angle_between(self, other):
         dot_prod = self.dot(other)
@@ -42,7 +40,7 @@ class Vector:
         mag_other = other.magnitude()
         if mag_self == 0 or mag_other == 0:
             raise ValueError("Cannot compute angle with zero-length vector")
-        
+
         cos_theta = dot_prod / (mag_self * mag_other)
         cos_theta = max(-1.0, min(1.0, cos_theta))  
         return math.acos(cos_theta)
@@ -54,26 +52,11 @@ if __name__ == "__main__":
     print(f"v1 = {v1}")
     print(f"v2 = {v2}")
 
-    result_add = v1.add(v2)
-    print(f"v1 + v2 = {result_add}")
-
-    result_subtract = v1.subtract(v2)
-    print(f"v1 - v2 = {result_subtract}")
-
-    result_dot = v1.dot(v2)
-    print(f"v1 . v2 = {result_dot}")
-
-    result_cross = v1.cross(v2)
-    print(f"v1 x v2 = {result_cross}")
-
-    result_magnitude_v1 = v1.magnitude()
-    print(f"|v1| = {result_magnitude_v1}")
-
-    result_normalize_v1 = v1.normalize()
-    print(f"Normalized v1 = {result_normalize_v1}")
-
-    result_scale = v1.scale(2)
-    print(f"v1 scaled by 2 = {result_scale}")
-
-    result_angle = v1.angle_between(v2)
-    print(f"Angle between v1 and v2 (radians) = {result_angle}")
+    print(f"v1 + v2 = {v1.add(v2)}")
+    print(f"v1 - v2 = {v1.subtract(v2)}")
+    print(f"v1 . v2 = {v1.dot(v2)}")
+    print(f"v1 x v2 = {v1.cross(v2)}")
+    print(f"|v1| = {v1.magnitude()}")
+    print(f"Normalized v1 = {v1.normalize()}")
+    print(f"v1 scaled by 2 = {v1.scale(2)}")
+    print(f"Angle between v1 and v2 (radians) = {v1.angle_between(v2)}")

@@ -1,8 +1,8 @@
 import torch
 from torch import nn
-import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
+import matplotlib.pyplot as plt
 
 ### Setup
 # Create known parameters
@@ -107,5 +107,3 @@ for epoch in range(epochs):
             plt.legend();
             plt.show()
             '''
-
-

@@ -1,21 +1,26 @@
-import weakref 
+import weakref
 
-class MyClass:
-    def __init__(self, name):
-        self.name = name
+_cache = weakref.WeakValueDictionary()
 
-    def __del__(self):
-        print(f"Object {self.name} is being deleted.")
+class Data:
+    def __init__(self, value):
+        self.value = value
+    def __repr__(self):
+        return f"Data({self.value})"
 
-def callback(ref):
-    print(f"Callback: {ref} is no longer accessible.")
+def get_data(key):
+    if key in _cache:
+        print("Cache hit")
+        return _cache[key]
+    print("Cache miss")
+    obj = Data(key)
+    _cache[key] = obj
+    return obj
 
-obj = MyClass('Object 2')
+d1 = get_data(10)  
+d2 = get_data(10) 
 
-weak_ref = weakref.ref(obj, callback)
+del d1, d2  
+import gc; gc.collect()
 
-print(weak_ref()) 
-
-del obj  
-
-print(weak_ref())  
+print("After GC, cache contains:", list(_cache.items()))

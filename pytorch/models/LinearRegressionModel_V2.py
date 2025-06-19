@@ -1,7 +1,7 @@
 import torch
 from torch import nn
-import matplotlib.pyplot as plt
 from pathlib import Path
+import matplotlib.pyplot as plt
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using: {device}")
@@ -77,10 +77,8 @@ for epoch in range(epochs):
     if epoch % 100 == 0:
         print(f"Epoch: {epoch} | Train loss: {loss} | Test loss: {test_loss}")
 
-# Result
-from pprint import pprint
 print("The model learned the following values for weights and bias:")
-pprint(model_1.state_dict())
+print(model_1.state_dict())
 print("The original values for weights and bias are:")
 print(f"weights: {weight}, bias: {bias}\n")
 

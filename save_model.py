@@ -1,6 +1,13 @@
 from pathlib import Path
 import torch
+from torch import nn
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+class Model(nn.Module):
+    pass
+
+model = Model()
 MODEL_PATH = Path("saved_models")
 MODEL_PATH.mkdir(parents=True, exist_ok=True)
 

@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 np.random.seed(42)
+
 X = 2 * np.random.rand(100, 1)
 true_slope = 3.5
 true_intercept = 1.2

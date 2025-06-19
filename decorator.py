@@ -1,26 +1,48 @@
-import time
+from time import perf_counter, sleep
 
-def my_decorator(func):
+def timeit(func):
     def wrapper(*args, **kwargs):
-        start_time = time.time()
-        print("Before the function is called.")
-        
-        try:
-            result = func(*args, **kwargs)
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            result = None
-        
-        end_time = time.time()
-        print(f"After the function is called. Execution time: {end_time - start_time:.4f} seconds.")
+        start = perf_counter()
+        result = func(*args, **kwargs)
+        end = perf_counter()
+        print(f"{func.__name__} took {end - start:.4f} seconds")
         return result
     return wrapper
 
-@my_decorator
-def say_hello(name, greeting="Hello"):
-    if name == "error":
-        raise ValueError("This is a test error.")
-    print(f"{greeting}, {name}!")
+@timeit
+def train_model(epochs):
+    for _ in range(epochs):
+        sleep(0.1)
 
-say_hello("Alice", greeting="Hi")
-say_hello("error")
+train_model(5)
+
+
+
+import tracemalloc
+import numpy as np
+
+def mem_profiler(func):
+    def wrapper(*args, **kwargs):
+        tracemalloc.start()
+        start_time = perf_counter()
+        
+        result = func(*args, **kwargs)
+        
+        end_time = perf_counter()
+        current, peak = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+        
+        print(f"{func.__name__} took {end_time - start_time:.4f} seconds")
+        print(f"Peak memory usage: {peak / 10**6:.4f} MB")
+        
+        return result
+    return wrapper
+
+@mem_profiler
+def train_dummy(epochs):
+    data = []
+    for _ in range(epochs):
+        data.append(np.random.randn(1000, 100))
+    return data
+
+train_dummy(2)
