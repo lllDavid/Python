@@ -1,6 +1,8 @@
 import os
 import random
 
+# Randomly select files to delete from the excess files until balanced
+
 def balance_files(folder_path, keywords, target_count):
     files = os.listdir(folder_path)
 
@@ -39,4 +41,4 @@ def balance_files(folder_path, keywords, target_count):
 
 folder_path = 'images'
 target_count = 1000  
-balance_files(folder_path, ['cat', 'dog'], target_count)
+balance_files(folder_path, ['human', 'robot'], target_count)
