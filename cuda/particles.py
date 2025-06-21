@@ -1,10 +1,11 @@
 import numpy as np
-from numba import cuda, float32
+from numba import cuda
 import matplotlib.pyplot as plt
+from math import sqrt
 
 G = 6.67430e-11  
-DT = 0.01        
-SOFTENING = 1e-9 
+DT = 0.01       
+SOFTENING = 1e-9
 
 @cuda.jit
 def compute_forces(pos, vel, mass, N):
@@ -17,7 +18,7 @@ def compute_forces(pos, vel, mass, N):
                 dx = pos[j, 0] - pos[i, 0]
                 dy = pos[j, 1] - pos[i, 1]
                 dist_sqr = dx**2 + dy**2 + SOFTENING
-                inv_dist = 1.0 / math.sqrt(dist_sqr)
+                inv_dist = 1.0 / sqrt(dist_sqr) 
                 inv_dist3 = inv_dist**3
 
                 f = G * mass[i] * mass[j] * inv_dist3
@@ -35,9 +36,9 @@ def update_positions(pos, vel, N):
         pos[i, 1] += vel[i, 1] * DT
 
 N = 512
-pos = np.random.rand(N, 2).astype(np.float32) * 100.0
-vel = np.zeros((N, 2), dtype=np.float32)
-mass = np.ones(N, dtype=np.float32) * 1e3
+pos = np.random.rand(N, 2).astype(np.float32) * 100.0 
+vel = np.zeros((N, 2), dtype=np.float32)               
+mass = np.ones(N, dtype=np.float32) * 1e3             
 
 d_pos = cuda.to_device(pos)
 d_vel = cuda.to_device(vel)

@@ -1,12 +1,13 @@
-import sqlite3
+from sqlite3 import connect
 
+# Mock Database workflow with __enter__ and __exit__
 class DatabaseConnection:
     def __init__(self, db_name):
         self.db_name = db_name
 
     def __enter__(self):
         print(f"Connecting to database: {self.db_name}")
-        self.conn = sqlite3.connect(self.db_name)
+        self.conn = connect(self.db_name)
         self.cursor = self.conn.cursor()
 
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS users
