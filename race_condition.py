@@ -1,20 +1,24 @@
 import threading
+import time
+import random
 
 counter = 0
 
 def increment():
     global counter
-    for _ in range(100000):
-        counter += 1
+    for _ in range(10000):  
+        temp = counter
+        time.sleep(random.uniform(0, 0.000001))  
+        temp += 1
+        counter = temp
 
-for _ in range(10):
-    t1 = threading.Thread(target=increment)
-    t2 = threading.Thread(target=increment)
+threads = []
+for _ in range(10):  
+    t = threading.Thread(target=increment)
+    threads.append(t)
+    t.start()
 
-    t1.start()
-    t2.start()
+for t in threads:
+    t.join()
 
-    t1.join()
-    t2.join()
-
-    print("Final counter value:", counter)
+print("Final counter value:", counter)
