@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats import zscore
 
 np.random.seed(42)
 
@@ -22,13 +23,12 @@ df = pd.DataFrame({
 })
 
 df = df.drop_duplicates()
-
 df['Amount'] = df['Amount'].fillna(df['Amount'].mean())
 df['Location'] = df['Location'].fillna('Unknown')
 
-df = pd.get_dummies(df, columns=['Product Category', 'Payment Method', 'Location'], drop_first=True)
-
+df = pd.get_dummies(df, columns=['Product Category', 'Payment Method', 'Location'], drop_first=False)
 df.set_index('Transaction Date', inplace=True)
+
 daily_transactions = df.resample('D').agg({'Amount': 'sum', 'User ID': 'nunique'})
 
 plt.figure(figsize=(14, 7))
@@ -62,15 +62,13 @@ plt.xlabel('Date')
 plt.ylabel('Amount (USD)')
 plt.show()
 
-pivot_table = pd.pivot_table(df, values='Amount', 
-                             index=['Location_Houston', 'Location_Miami'], 
+pivot_table = pd.pivot_table(df, values='Amount',
+                             index=['Location_Houston', 'Location_Miami'],
                              columns=['Product Category_Books', 'Product Category_Electronics'],
-                             aggfunc=np.sum, 
+                             aggfunc=np.sum,
                              fill_value=0)
 
 print(pivot_table)
-
-from scipy.stats import zscore
 
 df['Amount_zscore'] = zscore(df['Amount'])
 outliers = df[df['Amount_zscore'].abs() > 3]
@@ -83,6 +81,6 @@ print(corr_matrix)
 category_payment_method_distribution = df.groupby(['Product Category_Electronics', 'Payment Method_Credit Card']).size().unstack()
 category_payment_method_distribution.plot(kind='bar', stacked=True, figsize=(14, 7))
 plt.title('Product Category vs Payment Method Distribution')
-plt.xlabel('Product Category')
+plt.xlabel('Product Category Electronics (0=No, 1=Yes)')
 plt.ylabel('Transaction Count')
 plt.show()

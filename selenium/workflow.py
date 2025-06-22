@@ -1,10 +1,14 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
-# Workflow to simulate searching for a product adding, it to cart, and registering a account
+
+# Workflow to simulate searching for a product, adding it to cart, and registering a account
+
+
 username = "user"
 email = "user@example.com"
 password = "1234567890"
