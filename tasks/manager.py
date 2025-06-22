@@ -1,31 +1,8 @@
 from datetime import datetime, timedelta
+from task import Task, Priority
 
-class Priority:
-    LOW = 'Low'
-    MEDIUM = 'Medium'
-    HIGH = 'High'
 
-class Task:
-    def __init__(self, task_id, name, description, priority, deadline):
-        self.task_id = task_id
-        self.name = name
-        self.description = description
-        self.priority = priority
-        self.deadline = deadline
-        self.created_at = datetime.now()
-        self.completed = False
-
-    def __str__(self):
-        return f"Task ID: {self.task_id}\nName: {self.name}\nDescription: {self.description}\nPriority: {self.priority}\nDeadline: {self.deadline.strftime('%Y-%m-%d %H:%M:%S')}\nCreated At: {self.created_at.strftime('%Y-%m-%d %H:%M:%S')}\nCompleted: {self.completed}"
-
-    def mark_as_completed(self):
-        self.completed = True
-        print(f"Task {self.task_id} marked as completed.")
-
-    def time_left(self):
-        return self.deadline - datetime.now()
-
-class TaskManager:
+class Manager:
     def __init__(self):
         self.tasks = {}
 
@@ -77,7 +54,7 @@ class TaskManager:
 
 
 if __name__ == "__main__":
-    task_manager = TaskManager()
+    task_manager = Manager()
 
     task1 = Task(1, "Complete Python assignment", "Finish coding and submit.", Priority.HIGH, datetime.now() + timedelta(days=2))
     task2 = Task(2, "Read book", "Read 'Python Crash Course'.", Priority.MEDIUM, datetime.now() + timedelta(days=5))
@@ -101,4 +78,3 @@ if __name__ == "__main__":
 
     print("\nIncomplete tasks:")
     task_manager.show_incomplete_tasks()
-

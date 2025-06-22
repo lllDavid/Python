@@ -9,8 +9,7 @@ def remove_duplicates(lst):
 
 print(remove_duplicates(lst))  
 
-
-text = "Hello abc hello 123 heLLo 223 xcb"
+text = "Hello how hello why HeLLo where hellO when HELLO"
 
 def count_words(text):
     word_counts = {}
@@ -25,7 +24,6 @@ def count_words(text):
 
 print(count_words(text))
 
-
 def collatz(n):
     while n != 1:
         if n % 2 == 0:
@@ -36,7 +34,6 @@ def collatz(n):
 
 print(collatz(10))
 
-
 def collatz_recursive(n):
     if n == 1:
         return
@@ -46,11 +43,9 @@ def collatz_recursive(n):
     else:
         n = 3 * n + 1
         print(n)
-
     collatz_recursive(n)
 
 print(collatz(10))
-
 
 def fizzbuzz(n):
     for i in range(n):
@@ -65,11 +60,9 @@ def fizzbuzz(n):
 
 fizzbuzz(101)
 
-
 def fizzbuzz_recursive(n, i=1):
     if i > n:
         return
-    
     if i % 15 == 0:
         print("FizzBuzz")
     elif i % 5 == 0:
@@ -78,16 +71,13 @@ def fizzbuzz_recursive(n, i=1):
         print("Fizz")
     else:
         print(i)
-    
     fizzbuzz_recursive(n, i + 1)
 
 fizzbuzz_recursive(101)
 
-
 def fibonacci(n):
     a,b = 0,1
     print(a)
-
     for _ in range(n):
         c = a+b
         a = b
@@ -96,19 +86,15 @@ def fibonacci(n):
 
 fibonacci(10)
 
-
 def fibonacci_recursive(n):
     if n == 0:
         return 0
-    
     elif n == 1:
         return 1
-    
     else:
         return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
 
 fibonacci(10)
-
 
 from itertools import chain
 
@@ -123,7 +109,6 @@ def chain2(*iterables):
 for i in chain2(items, items2):
     print(i)
 
-
 from itertools import permutations
 
 items = ["A", "B", "C"]
@@ -132,13 +117,11 @@ perms = permutations(items)
 
 for p in perms:
     print(p)
-    
 
 from itertools import combinations
 items = [1, 2, 3]
 result = combinations(items, 2)
 print(list(result)) 
-
 
 from itertools import groupby
 
@@ -149,7 +132,6 @@ grouped = groupby(numbers)
 for key, group in grouped:
     print(f"Key: {key}, Group: {list(group)}")
 
-
 from functools import partial
 
 def multiply(a, b):
@@ -157,7 +139,6 @@ def multiply(a, b):
 
 double = partial(multiply, 2)
 print(double(5))  
-
 
 import functools
 
@@ -169,13 +150,11 @@ def expensive_computation(x):
 print(expensive_computation(4))  
 print(expensive_computation(4)) 
 
-
 from functools import reduce
 
 numbers = [1, 2, 3, 4]
 result = reduce(lambda x, y: x + y, numbers)
 print(result)  
-
 
 def binary_search(arr, target, low, high):
     if low > high:
@@ -192,10 +171,87 @@ arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 target = 5
 print(binary_search(arr, target, 0, len(arr) - 1))  
 
+def reverse_words(sentence):
+    words = sentence.split()
+    return ' '.join(words[::-1])
+
+print(reverse_words("Hello reverse me"))
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+print(gcd(48, 18))
+
+def decimal_to_binary(n):
+    if n == 0:
+        return "0"
+    bits = []
+    while n > 0:
+        bits.append(str(n % 2))
+        n //=2
+    bits.reverse()
+    return ''.join(bits)
+
+print(decimal_to_binary(10))
+
+from collections import deque
+
+queue = deque([1, 2, 3])
+queue.append(4)
+queue.popleft()
+print(queue)  
+
+from collections import Counter
+
+data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+counter = Counter(data)
+print(counter) 
+
+from collections import namedtuple
+
+Point = namedtuple('Point', ['x', 'y'])
+p = Point(11, y=22)
+print(p.x, p.y) 
+
+from collections import defaultdict
+
+dd = defaultdict(int)
+dd['apples'] += 1
+dd['oranges'] += 2
+print(dd) 
+
+from collections import OrderedDict
+
+od = OrderedDict()
+od['first'] = 1
+od['second'] = 2
+od['third'] = 3
+for key, value in od.items():
+    print(key, value)
+
+def are_rotations(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    return s2 in (s1 + s1)
+
+print(are_rotations("abcd", "cdab"))
+print(are_rotations("abcd", "acbd"))
+
+def primes_up_to(n):
+    sieve = [True] * (n+1)
+    sieve[0:2] = [False, False]
+    for i in range(2, int(n**0.5) + 1):
+        if sieve[i]:
+            for j in range(i*i, n+1, i):
+                sieve[j] = False
+    return [i for i in range(n+1) if sieve[i]]
+
+print(primes_up_to(20))
 
 target = 8
 nums = [1,2,3,4,5,6]
-
 
 def nums_2(target, nums):
     i = 0
@@ -209,18 +265,14 @@ def nums_2(target, nums):
 
 print(nums_2(target,nums))
 
-
 str1 = "bank"
 str2 = "kanb"
 
-
 def is_changeable(str1, str2):
     diff = []
-
     for i, j in zip(str1,str2):
         if i != j:
             diff.append([i,j])
-
     print(diff)
     print(len(diff))
     if len(diff) == 2:
@@ -229,16 +281,13 @@ def is_changeable(str1, str2):
 
 print(is_changeable(str1,str2))
 
-
 def are_anagrams(str1, str2):
     str1 = str1.replace(" ", "").lower()
     str2 = str2.replace(" ", "").lower()
-
     return sorted(str1) == sorted(str2)
 
 print(are_anagrams("listen", "silent"))  
 print(are_anagrams("hello", "world"))    
-
 
 nums = [1, 2, 3, 4, 5]
 
@@ -250,3 +299,64 @@ def max_num(nums: list):
     return current_value
 
 print(max_num(nums))
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+print(is_prime(17))
+print(is_prime(18))
+
+def factorial(n):
+    if n < 0:
+        raise ValueError("Negative input not allowed")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+print(factorial(5))
+
+def flatten(nested_list):
+    flat_list = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flat_list.extend(flatten(item))
+        else:
+            flat_list.append(item)
+    return flat_list
+
+print(flatten([1, [2, [3, 4], 5], 6]))
+
+def is_palindrome(s):
+    s = ''.join(c.lower() for c in s if c.isalnum())
+    return s == s[::-1]
+
+print(is_palindrome("A man a plan a canal Panama"))
+print(is_palindrome("Hello"))
+
+def merge_sorted_lists(lst1, lst2):
+    i, j = 0, 0
+    merged = []
+    while i < len(lst1) and j < len(lst2):
+        if lst1[i] < lst2[j]:
+            merged.append(lst1[i])
+            i += 1
+        else:
+            merged.append(lst2[j])
+            j += 1
+    merged.extend(lst1[i:])
+    merged.extend(lst2[j:])
+    return merged
+
+print(merge_sorted_lists([1, 3, 5], [2, 4, 6]))
