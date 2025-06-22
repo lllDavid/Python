@@ -1,4 +1,4 @@
-from flask import Flask, request, g
+from flask import Flask, jsonify, request, g
 import sqlite3
 
 app = Flask(__name__)
@@ -39,6 +39,7 @@ def init_db():
         cursor.executemany("INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)", users)
         db.commit()
 
+# Intentionally vulnerable
 @app.route('/students')
 def students():
     user_id = request.args.get('id', '')
@@ -55,6 +56,68 @@ def students():
             return "No user found"
     except Exception as e:
         return f"SQL error: {e}"
+    
+# Parameterized
+@app.route('/students2', methods=['GET'])
+def students2():
+    user_id = request.args.get('id')
+    if not user_id or not user_id.isdigit():
+        return jsonify({"error": "Invalid user ID"}), 400
+
+    db = get_db()
+    cursor = db.cursor()
+    try:
+        cursor.execute("SELECT id, username, email, role FROM users WHERE id = ?", (user_id,))
+        user = cursor.fetchone()
+        if user:
+            return jsonify(dict(user)), 200
+        else:
+            return jsonify({"error": "User not found"}), 404
+    except Exception as e:
+        return jsonify({"error": "Database error"}), 500
+    
+# Intentionally vulnerable
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form.get('username', '')
+    password = request.form.get('password', '')
+    db = get_db()
+    cursor = db.cursor()
+    
+    query = f"SELECT * FROM users WHERE username = '{username}' AND password_hash = '{password}'"
+    try:
+        cursor.execute(query)
+        user = cursor.fetchone()
+        if user:
+            return f"Login success! Welcome, {user['username']}."
+        else:
+            return "Invalid username or password."
+    except Exception as e:
+        return f"SQL error: {e}"
+
+# Parameterized
+@app.route('/login_safe', methods=['POST'])
+def login_safe():
+    username = request.form.get('username')
+    password = request.form.get('password')
+    if not username or not password:
+        return jsonify({"error": "Username and password required"}), 400
+
+    db = get_db()
+    cursor = db.cursor()
+    try:
+        cursor.execute(
+            "SELECT username FROM users WHERE username = ? AND password_hash = ?",
+            (username, password)
+        )
+        user = cursor.fetchone()
+        if user:
+            return jsonify({"message": f"Login success! Welcome, {user['username']}."}), 200
+        else:
+            return jsonify({"error": "Invalid username or password."}), 401
+    except Exception:
+        return jsonify({"error": "Database error"}), 500
+
 
 if __name__ == '__main__':
     init_db()
