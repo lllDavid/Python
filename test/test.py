@@ -360,3 +360,6 @@ def merge_sorted_lists(lst1, lst2):
     return merged
 
 print(merge_sorted_lists([1, 3, 5], [2, 4, 6]))
+
+def sum_list(lst):
+    return reduce(lambda acc, x: acc + x, lst, 0)
