@@ -1,6 +1,7 @@
-from os import getlogin, listdir, scandir, path
+from os import listdir, scandir, path
 from collections import defaultdict
 from subprocess import run
+from sysconfig import get_paths
 
 # NOTE: Matching logic is not 100% accurate
 # TODO: Matches wrong on certain packages like "memory-profiler" matches "memory_profiler-0.61.0.dist-info" but should match "memory_profiler.py" so the size is wrong on those
@@ -27,8 +28,8 @@ def get_folder_size(folder_path):
     return total
 
 # Calculate disk usage for given packages in site-packages directory
-def get_package_sizes(packages, user_name):
-    dir = fr"C:\Users\{user_name}\AppData\Local\Programs\Python\Python313\Lib\site-packages"
+def get_package_sizes(packages):
+    dir = get_paths()["purelib"]
     package_sizes = defaultdict(int)
 
     dir_entries = listdir(dir)
@@ -64,9 +65,8 @@ def get_package_sizes(packages, user_name):
 
 
 def main():
-    current_user = getlogin()
     installed_packages = get_installed_packages()
-    package_size_map = get_package_sizes(installed_packages, current_user)
+    package_size_map = get_package_sizes(installed_packages)
 
     total = 0
     max_package_name_length = max(len(pkg_name) for pkg_name in package_size_map.keys())
