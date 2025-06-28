@@ -1,29 +1,29 @@
-a = 256
-b = 256
-print(a is b)  
+def check_int_identity(value):
+    a = int(value)
+    b = int(value)
+    return a is b
 
-x = -5
-y = -5
-print(x is y)  
+def test_integer_caching():
+    test_values = [256, 257, -5, -6, 1000, -1000]
 
-a = 257
-b = 257
-print(a is b) 
+    for val in test_values:
+        result = check_int_identity(val)
+        status = "cached" if result else "not cached"
+        print(f"Integer {val} is {val} -> {status}")
 
-x = -10
-y = -10
-print(x is y)  
+    print("\nTesting integers created with expressions:")
+    expressions = [
+        (128 + 128),
+        (200 + 57),
+        (-3 - 2),
+        (-3 - 3),
+        (500 * 2),
+        (-500 * 2),
+    ]
 
-s1 = "hello"
-s2 = "hello"
-print(s1 is s2)  
+    for val in expressions:
+        result = check_int_identity(val)
+        status = "cached" if result else "not cached"
+        print(f"Integer {val} created by expression -> {status}")
 
-s3 = "hello world!"
-s4 = "hello world!"
-print(s3 is s4)  
-
-import sys
-
-s1 = sys.intern("hello world!")
-s2 = sys.intern("hello world!")
-print(s1 is s2)  
+test_integer_caching()
