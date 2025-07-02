@@ -1,17 +1,16 @@
 import json
-
-def user_input() -> None:
-    user_data = {
-        "name": str(input("Name: ")),
-        "age": int(input("Age: "))
-    }
-    
-    with open("data.json", "w") as file:
-        json.dump(user_data, file)
+import os
 
 def json_reader(file) -> None:
+    if not os.path.exists(file):
+        print(f"{file} does not exist.")
+        return
     with open(file, "r") as json_file:
-        file_data = json.load(json_file)
-        print(file_data)
+        try:
+            file_data = json.load(json_file)
+            print(file_data)
+        except json.JSONDecodeError:
+            print("Error reading JSON data.")
 
-json_reader("data.json")
+if __name__ == "__main__":
+    json_reader("data.json")
