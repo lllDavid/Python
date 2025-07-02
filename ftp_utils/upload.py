@@ -1,9 +1,12 @@
 from ftplib import FTP
 
-ftp = FTP('ftp.example.com')
-ftp.login('username', 'password')
+ftp_server = input("Enter FTP server address: ")
+username = input("Enter username: ")
+password = input("Enter password: ")
+filename = input("Enter filename to upload: ")
 
-filename = 'upload.txt'
+ftp = FTP(ftp_server)
+ftp.login(username, password)
 
 with open(filename, 'rb') as f:
     ftp.storbinary(f'STOR {filename}', f)
