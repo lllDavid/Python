@@ -2,7 +2,6 @@ from re import match
 from functools import cmp_to_key
 
 def parse_version(v):
-    # Separate main numeric parts and optional pre-release tag (alpha, beta, rc, etc.)
     _match = match(r"^(\d+(?:\.\d+)*)(?:-([a-zA-Z0-9]+))?$", v)
     if not _match:
         raise ValueError(f"Invalid version format: {v}")
@@ -32,14 +31,12 @@ def compare_versions(v1, v2):
     else:
         return (pre1 > pre2) - (pre1 < pre2)
 
-# Examples:
 print(compare_versions("1.2", "1.2.0"))         
 print(compare_versions("1.2.1", "1.2.0"))       
 print(compare_versions("1.1.9", "1.2"))         
 print(compare_versions("1.2.0-alpha", "1.2.0")) 
 print(compare_versions("1.2.0-beta", "1.2.0-alpha")) 
 
-# Sorting example:
 versions = ["1.2.0", "1.2.0-alpha", "1.1.9", "1.2", "1.2.1"]
 versions.sort(key=cmp_to_key(compare_versions))
 print(versions)
