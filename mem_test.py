@@ -26,4 +26,3 @@ def memory_management_example():
 
 if __name__ == "__main__":
     memory_management_example()
-
