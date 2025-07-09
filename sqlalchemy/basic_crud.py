@@ -1,3 +1,5 @@
+from base_model import User
+
 def create_user(session, username: str, email: str):
     user = User(username=username, email=email)
     session.add(user)
