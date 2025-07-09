@@ -66,7 +66,6 @@ def collatz(n):
 
 collatz(6)  
 
-# Example for actual use, Simulated directory tree, numbers = bytes
 file_system = {
     'folder1': {
         'file1.txt': 1200,

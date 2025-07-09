@@ -3,7 +3,6 @@ import asyncio
 import functools
 import inspect
 
-# A decorator that retries a function on specified exceptions with optional delay, supporting both sync and async
 def retry(max_retries=3, delay=1, exceptions=(Exception,)):
     def decorator(func):
         is_coroutine = inspect.iscoroutinefunction(func)
