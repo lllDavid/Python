@@ -1,118 +1,86 @@
-class BSTNode:
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
+class Node:
+    def __init__(self, val):
+        self.val, self.left, self.right = val, None, None
 
-    def insert(self, key):
-        if key < self.key:
-            if self.left is None:
-                self.left = BSTNode(key)
-            else:
-                self.left.insert(key)
-        elif key > self.key:
-            if self.right is None:
-                self.right = BSTNode(key)
-            else:
-                self.right.insert(key)
+    def add(self, val):
+        branch = 'left' if val < self.val else 'right'
+        node = getattr(self, branch)
+        if node is None:
+            setattr(self, branch, Node(val))
+        elif val != self.val:
+            node.add(val)
 
-    def find(self, key):
-        if key == self.key:
-            return True
-        elif key < self.key and self.left:
-            return self.left.find(key)
-        elif key > self.key and self.right:
-            return self.right.find(key)
-        return False
+    def has(self, val):
+        if val == self.val: return True
+        next_node = self.left if val < self.val else self.right
+        return next_node.has(val) if next_node else False
 
-    def inorder(self):
-        if self.left:
-            for val in self.left.inorder():
-                yield val
-        yield self.key
-        if self.right:
-            for val in self.right.inorder():
-                yield val
+    def walk(self):
+        if self.left: yield from self.left.walk()
+        yield self.val
+        if self.right: yield from self.right.walk()
 
-    def _delete_node(self, key):
-        if key < self.key:
-            if self.left:
-                self.left = self.left._delete_node(key)
-        elif key > self.key:
-            if self.right:
-                self.right = self.right._delete_node(key)
+    def remove(self, val):
+        if val < self.val:
+            if self.left: self.left = self.left.remove(val)
+        elif val > self.val:
+            if self.right: self.right = self.right.remove(val)
         else:
-            if self.left is None:
-                return self.right
-            elif self.right is None:
-                return self.left
-            
-            min_larger_node = self.right
-            while min_larger_node.left:
-                min_larger_node = min_larger_node.left
-            
-            self.key = min_larger_node.key
-            self.right = self.right._delete_node(min_larger_node.key)
+            if not self.left: return self.right
+            if not self.right: return self.left
+            min_node = self.right
+            while min_node.left: min_node = min_node.left
+            self.val = min_node.val
+            self.right = self.right.remove(min_node.val)
         return self
 
     def __repr__(self):
-        left = repr(self.left) if self.left else ''
-        right = repr(self.right) if self.right else ''
-        return f"({left} {self.key} {right})".strip()
+        l = repr(self.left) if self.left else ''
+        r = repr(self.right) if self.right else ''
+        return f"({l} {self.val} {r})".strip()
 
 
 class BST:
     def __init__(self):
-        self.root = None
-        self._size = 0
+        self.root, self.size = None, 0
 
-    def insert(self, key):
-        if self.root is None:
-            self.root = BSTNode(key)
-            self._size = 1
-        else:
-            if not self.__contains__(key):
-                self.root.insert(key)
-                self._size += 1
+    def insert(self, val):
+        if not self.root:
+            self.root = Node(val)
+            self.size = 1
+        elif val not in self:
+            self.root.add(val)
+            self.size += 1
 
-    def delete(self, key):
-        if self.__contains__(key):
-            self.root = self.root._delete_node(key)
-            self._size -= 1
+    def delete(self, val):
+        if val in self:
+            self.root = self.root.remove(val)
+            self.size -= 1
 
-    def __contains__(self, key):
-        if self.root is None:
-            return False
-        return self.root.find(key)
+    def __contains__(self, val):
+        return self.root.has(val) if self.root else False
 
     def __iter__(self):
-        if self.root:
-            yield from self.root.inorder()
+        if self.root: yield from self.root.walk()
 
     def __len__(self):
-        return self._size
+        return self.size
 
     def __repr__(self):
-        if self.root is None:
-            return "BST()"
-        return f"BST{repr(self.root)}"
+        return f"BST{repr(self.root)}" if self.root else "BST()"
 
 
 if __name__ == "__main__":
-    bst = BST()
-    bst.insert(10)
-    bst.insert(5)
-    bst.insert(15)
-    bst.insert(3)
-    bst.insert(7)
+    t = BST()
+    for x in [10, 5, 15, 3, 7]: t.insert(x)
 
-    print(bst)                
-    print(7 in bst)           
-    print(8 in bst)           
-    print(list(bst))          
-    print(len(bst))           
+    print(t)
+    print(7 in t)
+    print(8 in t)
+    print(list(t))
+    print(len(t))
 
-    bst.delete(5)
-    print(bst)                
-    print(list(bst))          
-    print(len(bst))          
+    t.delete(5)
+    print(t)
+    print(list(t))
+    print(len(t))
