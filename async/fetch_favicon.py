@@ -20,13 +20,7 @@ async def fetch_favicon_from_multiple(urls: List[str]) -> List[Tuple[str, Option
         return results
 
 async def main() -> None:
-    urls = [
-        "https://cdn.iconscout.com/icon/free/png-512/free-code-icon-download-in-svg-png-gif-file-formats--minimal-icons-pack-miscellaneous-435955.png?f=webp&w=512",
-        "https://cdn3.iconfinder.com/data/icons/font-awesome-solid/640/code-1024.png",
-        "https://example.com/favicon.ico",  
-        "https://example.com/favicon.ico",
-        "https://example.com/favicon.ico"
-    ]
+    urls = []
 
     makedirs("favicons", exist_ok=True)
 
