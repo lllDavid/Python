@@ -1,7 +1,7 @@
 import json
 import pytest
 
-from api import app, posts
+from example_api import app, posts
 
 def initial_posts():
     return [
