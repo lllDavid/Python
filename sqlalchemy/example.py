@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///mydatabase.db', echo=True)
+engine = create_engine('sqlite:///example.db', echo=True)
 Base = declarative_base()
 
 class User(Base):
@@ -26,7 +26,7 @@ print(f"User: {alice.name}, Age: {alice.age}")
 alice.age = 26
 session.commit()
 
-session.delete(alice)
-session.commit()
+#session.delete(alice)
+#session.commit()
 
 session.close()

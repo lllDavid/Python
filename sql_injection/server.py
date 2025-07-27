@@ -58,8 +58,8 @@ def students():
         return f"SQL error: {e}"
     
 # Parameterized
-@app.route('/students2', methods=['GET'])
-def students2():
+@app.route('/students_safe', methods=['GET'])
+def students_safe():
     user_id = request.args.get('id')
     if not user_id or not user_id.isdigit():
         return jsonify({"error": "Invalid user ID"}), 400
@@ -121,4 +121,4 @@ def login_safe():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    app.run(debug=True, port=8000)

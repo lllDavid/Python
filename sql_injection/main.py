@@ -113,11 +113,11 @@ def test_login(url):
     print(f"    Total attempts: {total}, Successful logins: {success_count}, Failed: {fail_count}")
 
 def run_tests():
-    inject_check("http://127.0.0.1:5000/students")
-    inject_check("http://127.0.0.1:5000/students2")
+    inject_check("http://127.0.0.1:8000/students")
+    inject_check("http://127.0.0.1:8000/students_safe")
 
-    test_login("http://127.0.0.1:5000/login")
-    test_login("http://127.0.0.1:5000/login_safe")
+    test_login("http://127.0.0.1:8000/login")
+    test_login("http://127.0.0.1:8000/login_safe")
 
 if __name__ == "__main__":
     while True:
