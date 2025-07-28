@@ -58,3 +58,16 @@ def play():
             break
 
 play()
+
+nums = [1,2,3]
+def insert_and_shift(arr, index, value):
+    if index < 0 or index > len(arr):
+        raise IndexError("Index out of bounds")
+    arr.append(None)  
+    for i in range(len(arr) - 1, index, -1):
+        arr[i] = arr[i - 1]
+    arr[index] = value
+    return arr
+
+insert_and_shift(nums, 1, 99)
+print(nums) # [1, 99, 2, 3]
