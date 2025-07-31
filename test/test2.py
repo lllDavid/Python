@@ -71,3 +71,24 @@ def insert_and_shift(arr, index, value):
 
 insert_and_shift(nums, 1, 99)
 print(nums) # [1, 99, 2, 3]
+
+ram = {
+    0x400000: 0x55,       # push rbp
+    0x400001: 0x48,       # mov rbp, rsp (prefix)
+    0x400002: 0x89,       # mov rbp, rsp (opcode)
+    0x400003: 0xe5,       # mov rbp, rsp (modrm)
+    0x400004: 0x89,       # mov dword ptr [rbp - 4], edi (opcode)
+    0x400005: 0x7d,       # modrm for [rbp-4]
+    0x400006: 0xfc,       # displacement -4
+    0x400007: 0x89,       # mov dword ptr [rbp - 8], esi (opcode)
+    0x400008: 0x75,       # modrm for [rbp-8]
+    0x400009: 0xf8,       # displacement -8
+    0x40000a: 0x8b,       # mov eax, dword ptr [rbp - 4] (opcode)
+    0x40000b: 0x45,       # modrm for [rbp-4]
+    0x40000c: 0xfc,       # displacement -4
+    0x40000d: 0x03,       # add eax, dword ptr [rbp - 8] (opcode)
+    0x40000e: 0x45,       # modrm for [rbp-8]
+    0x40000f: 0xf8,       # displacement -8
+    0x400010: 0x5d,       # pop rbp
+    0x400011: 0xc3,       # ret
+}
