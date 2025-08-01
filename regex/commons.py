@@ -1,31 +1,22 @@
 import re
 
 def extract_emails(text):
-    """Extract all email addresses from a text."""
     pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
     return re.findall(pattern, text)
 
 def extract_phone_numbers(text):
-    """
-    Extract phone numbers with these assumptions:
-    - Start with optional + and country code (1-3 digits)
-    - Followed by 7-15 digits, possibly separated by spaces, dots, or hyphens
-    """
     pattern = r'\+\d{1,3}(?:[-.\s]?\d{2,4}){2,4}(?!\.\d)'  
     return [num.strip('.- ') for num in re.findall(pattern, text)]  
 
 def extract_urls(text):
-    """Extract URLs from text."""
     pattern = r'https?://[^\s]+'
     return re.findall(pattern, text)
 
 def extract_dates(text):
-    """Extract dates in formats like YYYY-MM-DD, DD/MM/YYYY, MM-DD-YYYY."""
     pattern = r'\b(\d{4}[-/]\d{2}[-/]\d{2}|\d{2}[-/]\d{2}[-/]\d{4})\b'
     return re.findall(pattern, text)
 
 def clean_price(price_str):
-    """Extract numeric price value from a string, handling European decimal comma."""
     price_str = price_str.replace('.', '').replace(',', '.')
     cleaned = re.sub(r'[^\d.]', '', price_str)
     try:
@@ -34,7 +25,6 @@ def clean_price(price_str):
         return None
 
 def validate_ipv4(ip):
-    """Validate IPv4 address format."""
     pattern = r'^((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(\.|$)){4}$'
     return bool(re.match(pattern, ip))
 
