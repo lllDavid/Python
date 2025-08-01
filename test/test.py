@@ -1,3 +1,25 @@
+def pi_digits(n):
+    pi = 0
+    for k in range(n):
+        pi += (1 / 16**k) * (
+            4 / (8 * k + 1) -
+            2 / (8 * k + 4) -
+            1 / (8 * k + 5) -
+            1 / (8 * k + 6)
+        )
+    return pi
+
+if __name__ == "__main__":
+    import time
+
+    digits = 100  
+    start = time.time()
+    result = pi_digits(digits)
+    end = time.time()
+
+    print(f"{result}")
+    print(f"Computed in {end - start:.4f} seconds")
+
 def collatz(n):
     while n != 1:
         if n % 2 == 0:
@@ -20,6 +42,7 @@ def collatz_recursive(n):
     collatz_recursive(n)
 
 print(collatz(10))
+
 
 def fizzbuzz(n):
     for i in range(n):
