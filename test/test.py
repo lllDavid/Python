@@ -9,21 +9,6 @@ def remove_duplicates(lst):
 
 print(remove_duplicates(lst))  
 
-text = "Hello how hello why HeLLo where hellO when HELLO"
-
-def count_words(text):
-    word_counts = {}
-    text = text.lower()
-    subs = text.split()
-    for word in subs:
-        if word in word_counts:
-            word_counts[word] += 1
-        else:
-            word_counts[word] = 1
-    return word_counts
-
-print(count_words(text))
-
 def collatz(n):
     while n != 1:
         if n % 2 == 0:
