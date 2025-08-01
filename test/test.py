@@ -360,3 +360,24 @@ print(merge_sorted_lists([1, 3, 5], [2, 4, 6]))
 
 def sum_list(lst):
     return reduce(lambda acc, x: acc + x, lst, 0)
+
+fib = (lambda f: (lambda n: f(f, n)))(
+    lambda self, x: x if x <= 1 else self(self, x-1) + self(self, x-2)
+)
+
+print(fib(10))  
+
+class AutoInitMeta(type):
+    def __new__(cls, name, bases, dct):
+        fields = dct.get('__fields__', [])
+        def __init__(self, *args):
+            for key, val in zip(fields, args):
+                setattr(self, key, val)
+        dct['__init__'] = __init__
+        return super().__new__(cls, name, bases, dct)
+
+class Model(metaclass=AutoInitMeta):
+    __fields__ = ['id', 'name', 'active']
+
+user = Model(1, 'admin', True)
+print(user.name) 
