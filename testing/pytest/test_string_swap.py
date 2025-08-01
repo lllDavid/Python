@@ -15,5 +15,3 @@ def test_areAlmostEqual():
     assert s2("a", "b") == False
     assert s2("ab", "ba") == True
     assert s2("abc", "acb") == True
-
-

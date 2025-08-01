@@ -1,14 +1,3 @@
-lst = [1, 2, 2, 3, 4, 4, 5, 6, 6]
-
-def remove_duplicates(lst):
-    unique = []
-    for item in lst:
-        if item not in unique:
-            unique.append(item)
-    return unique
-
-print(remove_duplicates(lst))  
-
 def collatz(n):
     while n != 1:
         if n % 2 == 0:
@@ -81,66 +70,6 @@ def fibonacci_recursive(n):
 
 fibonacci(10)
 
-from itertools import chain
-
-items = ["A", "B", "C"]
-items2 = ["D", "E", "F"]
-
-def chain2(*iterables):
-    chain(items, items2)
-    for i in iterables:
-        yield from i
-
-for i in chain2(items, items2):
-    print(i)
-
-from itertools import permutations
-
-items = ["A", "B", "C"]
-
-perms = permutations(items)
-
-for p in perms:
-    print(p)
-
-from itertools import combinations
-items = [1, 2, 3]
-result = combinations(items, 2)
-print(list(result)) 
-
-from itertools import groupby
-
-numbers = [1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 5, 5]
-
-grouped = groupby(numbers)
-
-for key, group in grouped:
-    print(f"Key: {key}, Group: {list(group)}")
-
-from functools import partial
-
-def multiply(a, b):
-    return a * b
-
-double = partial(multiply, 2)
-print(double(5))  
-
-import functools
-
-@functools.lru_cache(maxsize=None) 
-def expensive_computation(x):
-    print(f"Computing {x}...")
-    return x * x
-
-print(expensive_computation(4))  
-print(expensive_computation(4)) 
-
-from functools import reduce
-
-numbers = [1, 2, 3, 4]
-result = reduce(lambda x, y: x + y, numbers)
-print(result)  
-
 def binary_search(arr, target, low, high):
     if low > high:
         return -1
@@ -180,41 +109,6 @@ def decimal_to_binary(n):
     return ''.join(bits)
 
 print(decimal_to_binary(10))
-
-from collections import deque
-
-queue = deque([1, 2, 3])
-queue.append(4)
-queue.popleft()
-print(queue)  
-
-from collections import Counter
-
-data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
-counter = Counter(data)
-print(counter) 
-
-from collections import namedtuple
-
-Point = namedtuple('Point', ['x', 'y'])
-p = Point(11, y=22)
-print(p.x, p.y) 
-
-from collections import defaultdict
-
-dd = defaultdict(int)
-dd['apples'] += 1
-dd['oranges'] += 2
-print(dd) 
-
-from collections import OrderedDict
-
-od = OrderedDict()
-od['first'] = 1
-od['second'] = 2
-od['third'] = 3
-for key, value in od.items():
-    print(key, value)
 
 def are_rotations(s1, s2):
     if len(s1) != len(s2):
@@ -311,6 +205,101 @@ def factorial(n):
     return result
 
 print(factorial(5))
+
+from itertools import chain
+
+items = ["A", "B", "C"]
+items2 = ["D", "E", "F"]
+
+def chain2(*iterables):
+    chain(items, items2)
+    for i in iterables:
+        yield from i
+
+for i in chain2(items, items2):
+    print(i)
+
+from itertools import permutations
+
+items = ["A", "B", "C"]
+
+perms = permutations(items)
+
+for p in perms:
+    print(p)
+
+from itertools import combinations
+items = [1, 2, 3]
+result = combinations(items, 2)
+print(list(result)) 
+
+from itertools import groupby
+
+numbers = [1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 5, 5]
+
+grouped = groupby(numbers)
+
+for key, group in grouped:
+    print(f"Key: {key}, Group: {list(group)}")
+
+from functools import partial
+
+def multiply(a, b):
+    return a * b
+
+double = partial(multiply, 2)
+print(double(5))  
+
+import functools
+
+@functools.lru_cache(maxsize=None) 
+def expensive_computation(x):
+    print(f"Computing {x}...")
+    return x * x
+
+print(expensive_computation(4))  
+print(expensive_computation(4)) 
+
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+result = reduce(lambda x, y: x + y, numbers)
+print(result)  
+
+from collections import deque
+
+queue = deque([1, 2, 3])
+queue.append(4)
+queue.popleft()
+print(queue)  
+
+from collections import Counter
+
+data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+counter = Counter(data)
+print(counter) 
+
+from collections import namedtuple
+
+Point = namedtuple('Point', ['x', 'y'])
+p = Point(11, y=22)
+print(p.x, p.y) 
+
+from collections import defaultdict
+
+dd = defaultdict(int)
+dd['apples'] += 1
+dd['oranges'] += 2
+print(dd) 
+
+from collections import OrderedDict
+
+od = OrderedDict()
+od['first'] = 1
+od['second'] = 2
+od['third'] = 3
+for key, value in od.items():
+    print(key, value)
 
 def flatten(nested_list):
     flat_list = []
