@@ -1,4 +1,3 @@
-# Descriptor that enforces a minimum value constraint on an attribute
 class Descriptor:
     def __init__(self, name, min_value=0):
         self.name = name
@@ -18,16 +17,7 @@ class Descriptor:
 
 class Class:
     attr = Descriptor('attr', min_value=5)
-'''
-o = Class()
-o.attr = 10 # Valid
-print(o.attr)
-o.attr = 3 # Error
-print(o.attr)
-'''
 
-
-# Descriptor that enforces a certain expected type
 class ImmutableTyped:
     def __init__(self, name, expected_type):
         self.name = name
@@ -52,18 +42,18 @@ class Person:
     ssn = ImmutableTyped('ssn', str)  
 
 p = Person()
-p.ssn = "123-45-6789" # Valid
+p.ssn = "123-45-6789"
 print(p.ssn)
 
 p = Person()
-p.ssn = 123456789  #TypeError: ssn must be of type str
+p.ssn = 123456789
 print(p.ssn)
 
 p = Person()
 p.ssn = "123-45-6789"
-p.ssn = "987-65-4321"  #AttributeError: ssn is immutable and already set
+p.ssn = "987-65-4321"
 print(p.ssn)
 
 p = Person()
-del p.ssn  #AttributeError: ssn is immutable and cannot be deleted
-print(p.ssn) 
+del p.ssn
+print(p.ssn)

@@ -48,6 +48,3 @@ bob = Student("Bob", 85)
 
 print(alice > bob)  
 print(alice <= bob)  
-
-
-

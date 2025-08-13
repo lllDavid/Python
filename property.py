@@ -47,4 +47,3 @@ class Item:
 item = Item("Laptop")
 print(item.name)
 item.read_only_name = "Phone"
-

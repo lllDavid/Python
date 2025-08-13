@@ -48,5 +48,3 @@ numbers = [1, 2, 3, 4, 5, 6]
 filtered = itertools.filterfalse(lambda x: x % 2 != 0, numbers)
 for num in filtered:
     print(num)
-
-

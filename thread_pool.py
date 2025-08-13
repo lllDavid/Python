@@ -1,13 +1,19 @@
-from concurrent.futures import ThreadPoolExecutor
-import time
+from time import sleep, time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def fetch_data(x):
-    print(f"Fetching {x}")
-    time.sleep(1)
+    print(f"[{time():.2f}] Fetching {x}")
+    sleep(1)
     return f"Data {x}"
 
-with ThreadPoolExecutor(max_workers=4) as executor:
-    results = executor.map(fetch_data, [1, 2, 3, 4, 5])
+numbers = [1, 2, 3, 4, 5]
 
-for res in results:
-    print(res)
+with ThreadPoolExecutor(max_workers=4) as executor:
+    futures = {executor.submit(fetch_data, n): n for n in numbers}
+
+    for future in as_completed(futures):
+        try:
+            result = future.result()
+            print(f"[{time():.2f}] Result: {result}")
+        except Exception as e:
+            print(f"Error fetching data {futures[future]}: {e}")

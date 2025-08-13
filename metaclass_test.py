@@ -28,4 +28,3 @@ obj1 = MyClass("Object 1")
 obj2 = MyClass("Object 2")
 
 print(MyClass._instance_count)  
- 

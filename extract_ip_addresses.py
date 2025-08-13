@@ -29,12 +29,3 @@ def extractAddresses(filePath):
     print("Extracted IPs: ", extractedAddresses)
 
 extractAddresses("ip.txt")
-
-
-
-
-
-    
-
-
-

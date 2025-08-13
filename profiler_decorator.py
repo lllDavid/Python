@@ -41,4 +41,3 @@ def fast_sum(n):
 
 slow_sum(100000)
 fast_sum(100000)
-

@@ -1,6 +1,6 @@
-from pathlib import Path
 import torch
 from torch import nn
+from pathlib import Path
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

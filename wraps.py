@@ -12,7 +12,6 @@ def log_function_call(func):
 
 @log_function_call
 def compute_hash(data):
-    """Compute SHA-256 hash of the input string."""
     h = hashlib.sha256()
     h.update(data.encode('utf-8'))
     return h.hexdigest()

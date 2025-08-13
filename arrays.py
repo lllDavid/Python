@@ -31,5 +31,3 @@ data_array = array.array('i', range(10**7))
 
 print(f"List size in bytes: {sys.getsizeof(data_list)}")
 print(f"Array size in bytes: {sys.getsizeof(data_array)}")
-
-

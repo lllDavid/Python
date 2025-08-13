@@ -34,4 +34,3 @@ print(inc())
 print(inc())    
 print(dec())    
 print(current()) 
-
