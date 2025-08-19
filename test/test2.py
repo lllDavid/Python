@@ -92,3 +92,15 @@ ram = {
     0x400010: 0x5d,       # pop rbp
     0x400011: 0xc3,       # ret
 }
+
+s = "Python"
+
+utf32_bytes = s.encode("utf-32-le")
+
+print(" ".join(f"{c}" for c in s))
+
+hex_bytes = " ".join(f"{b:02X}" for b in utf32_bytes)
+print(hex_bytes)
+
+offsets = " ".join(f"{i:2}" for i in range(len(utf32_bytes)))
+print(offsets)
