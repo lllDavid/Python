@@ -20,6 +20,41 @@ if __name__ == "__main__":
     print(f"{result}")
     print(f"Computed in {end - start:.4f} seconds")
 
+from time import perf_counter
+
+def my_dec(func):
+    def wrapper(*args, **kwargs):
+        start = perf_counter()
+        result = func(*args, **kwargs)  
+        end = perf_counter()
+        elapsed = end - start
+        print(f"Result: {result}, Time elapsed: {elapsed:.4f} seconds")
+        return result 
+    return wrapper
+
+from random import randint
+array = [randint(1,99999) for i in range(1,999999)]
+target = randint(1,99999)
+@my_dec
+def mapping(arr, t):
+    seen = {}
+    for i, v in enumerate(arr):
+        diff = t- v
+        if diff in seen:
+            return [seen[diff],i]
+        else:
+            seen[v] = i
+
+print(mapping(array,target))
+
+@my_dec
+def tr(arr, t):
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            if arr[i]+arr[j] == t:
+                return [i,j]
+print(tr(array, target))
+
 def collatz(n):
     while n != 1:
         if n % 2 == 0:
